@@ -1,0 +1,12 @@
+﻿*register
+//这之间写上要定义的宏或导入其他的宏文件
+[macro name="namebox" text]
+[return]
+
+//在下面写上宏的实现部分
+
+*namebox
+[textsprite index=21 text=text size=24 color=0xffffff xinterval=3]
+[anchor index=21 set="center"]
+[addto index=21 target=message_layer pos=[97,20]]
+@return

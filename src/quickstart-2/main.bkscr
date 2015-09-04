@@ -1,0 +1,25 @@
+﻿*main
+[sprite index=10 file="images/BG32a_1280.jpg"]
+[addto index=10 target=basic_layer zorder=0 pos=[0,0] opacity=255]
+[textwindow file="ui/textwindow.png" pos=[126,450] rect=[20,55,1008,231]]
+
+[sprite index=11 file="images/A_happy"]
+[addto index=11 target=basic_layer zorder=10 pos=[400,120] opacity=255]
+[sprite index=12 file="images/B_wordless"]
+[addto index=12 target=basic_layer zorder=10 pos=[640,120] opacity=255]
+
+[bgm file="sound/tam-n16.ogg" fadein=200 loop=true vol=100]
+
+[namebox text="凉子"]
+抱歉，等很久了么？？[p]
+
+[namebox text="真由"]
+啊，真是的，凉子你怎么那么慢？[p]
+
+[fade channel=bgm stop=true time=800 to=0]
+[se file="sound/streets_afternoon.mp3" channel=1 fadein=2000 loop=true vol=100]
+[remove index=21 delete=true]
+美好的一天开始了[p]
+[stop channel=1 fadeout=2000]
+[waitse channel=1]
+@quit

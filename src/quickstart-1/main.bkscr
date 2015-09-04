@@ -1,0 +1,9 @@
+﻿*main
+[sprite index=10 file="images/BG32a_1280"]
+[addto index=10 target=basic_layer zorder=0 pos=[0,0] opacity=255]
+
+[textwindow file="ui/textwindow.png" pos=[126,450] rect=[20,55,1008,231]]
+你好，世界！[p]
+[textstyle size=16 color=0xff0000]
+你好，世界！现在，字号和颜色一定发生了改变。[p]
+@quit

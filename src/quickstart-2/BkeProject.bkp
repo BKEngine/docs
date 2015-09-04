@@ -1,0 +1,22 @@
+{
+    "import": {
+        "macro.bkscr": 0,
+        "main.bkscr": 0
+    },
+    "name": "quickstart",
+    "script": {
+    },
+    "source": {
+        "images": {
+            "BG32a_1280.jpg": 0
+        },
+        "sound": {
+            "streets_afternoon.mp3": 0,
+            "tam-n16.ogg": 0
+        },
+        "ui": {
+            "textwindow.png": 0
+        }
+    },
+    "version": "1.2"
+}

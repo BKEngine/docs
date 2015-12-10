@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>快速入门 - BKEngine Documentary</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../themefix.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "快速入门";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BKEngine Documentary</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">首页</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../faq/">常见问题（必看！）</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>旧教程</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../old/quickstart/">快速入门</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../old/image/">图像</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../old/sound/">声音</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../old/grammar/">语法进阶</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../old/animation/">动画</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>新教程（施工中）</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">快速入门</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_1">快速入门</a></li>
+                
+                    <li><a class="toctree-l4" href="#bkengine">初识BKEngine</a></li>
+                
+                    <li><a class="toctree-l4" href="#_2">开发工具</a></li>
+                
+                    <li><a class="toctree-l4" href="#_3">你好，世界！</a></li>
+                
+                    <li><a class="toctree-l4" href="#_4">修改标题和分辨率</a></li>
+                
+                    <li><a class="toctree-l4" href="#_5">创建文字框</a></li>
+                
+                    <li><a class="toctree-l4" href="#_6">修改文字样式</a></li>
+                
+                    <li><a class="toctree-l4" href="#_7">显示背景</a></li>
+                
+                    <li><a class="toctree-l4" href="#_8">显示人物立绘</a></li>
+                
+                    <li><a class="toctree-l4" href="#_9">将文字作为精灵显示</a></li>
+                
+                    <li><a class="toctree-l4" href="#_10">从屏幕移除精灵或文字精灵</a></li>
+                
+                    <li><a class="toctree-l4" href="#macro">宏（Macro）</a></li>
+                
+                    <li><a class="toctree-l4" href="#_11">声音、音乐和音效</a></li>
+                
+                    <li><a class="toctree-l4" href="#_12">尾声</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Parser 系统</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../parser/">基本语法</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../parser/engine/">特有函数</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BKEngine Documentary</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>新教程（施工中） &raquo;</li>
+        
+      
+    
+    <li>快速入门</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">快速入门<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="toc">
+<ul>
+<li><a href="#_1">快速入门</a><ul>
+<li><a href="#bkengine">初识BKEngine</a></li>
+<li><a href="#_2">开发工具</a></li>
+<li><a href="#_3">你好，世界！</a></li>
+<li><a href="#_4">修改标题和分辨率</a></li>
+<li><a href="#_5">创建文字框</a></li>
+<li><a href="#_6">修改文字样式</a></li>
+<li><a href="#_7">显示背景</a></li>
+<li><a href="#_8">显示人物立绘</a></li>
+<li><a href="#_9">将文字作为精灵显示</a></li>
+<li><a href="#_10">从屏幕移除精灵或文字精灵</a></li>
+<li><a href="#macro">宏（Macro）</a></li>
+<li><a href="#_11">声音、音乐和音效</a></li>
+<li><a href="#_12">尾声</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="bkengine">初识BKEngine<a class="headerlink" href="#bkengine" title="Permanent link">&para;</a></h2>
+<p>BKEngine是面包工坊开发的跨平台AVG游戏引擎，同时支持三大桌面平台（Win、Linux、OSX）和两大移动平台（iOS、Android）。本教程将带你快速了解如何使用 BKEngine 进行游戏制作。</p>
+<h2 id="_2">开发工具<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>在本教程中，介绍使用面包工坊官方的 BKECreator 开发工具进行游戏制作。</p>
+<p><img alt="BKE Creator" src="../images/quickstart-1.PNG" /></p>
+<p>这就是BKE Creator的基本界面。左侧选择文件，右侧编辑内容，是不是很容易理解？</p>
+<h2 id="_3">你好，世界！<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>启动BKE Creator，从左侧双击打开main.bkscr文件，你会看到如上图显示的内容，只有一行文字。
+我们称<code>*main</code>为一个<strong>标签</strong>，现在你只需要记住这个名字就可以了，以后的内容中将详细讲解。
+下面，尝试将其改为：</p>
+<pre><code class="javascript">*main
+你好，世界！[p]
+@quit
+</code></pre>
+
+<p>你可以点击右侧中部的绿色三角，启动调试功能，点击试试看！</p>
+<p><img alt="你好，世界！" src="../images/quickstart-2.PNG" /></p>
+<p>这就是AVG游戏引擎的基本功能——打印文字。</p>
+<h2 id="_4">修改标题和分辨率<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>现在，Creator 默认的游戏分辨率是800*600，而下载的素材是为1280*720分辨率制作的。800*600是较为传统的AVG游戏分辨率，现在大家的电脑、手机分辨率越来越高，且多为宽屏，所有我们更推荐使用1280*720分辨率制作你的游戏。</p>
+<p>双击Creator左侧的<code>config.bkpsr</code>，出现游戏设置对话框。</p>
+<p><img alt="游戏设置对话框" src="../images/quickstart-3.PNG" /></p>
+<p>在这里，你可以设置游戏名称、分辨率等重要参数。请将游戏名称改为<code>我的第一个游戏</code>，分辨率改为<code>1280, 720</code>，并点击保存。
+由于修改了分辨率，我们需要清空旧有存档，请从文件夹中找到工程所在的目录，删除其下的<code>SaveData</code>文件夹。
+再次点击绿色三角调试运行，你会发现窗口变大了，并且标题改成了「我的第一个游戏」。</p>
+<h2 id="_5">创建文字框<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>我们已经介绍了如何在游戏窗口中打印一行文字，但光是这样还不够，我们需要让文字显示在我们需要的位置，并且加上文字框图片，调整字号等。<strong><a href="../examples/textwindow.png">点击此处下载所需的素材文件</a></strong></p>
+<p>在Creator左侧的<code>资源</code>上右击，选择<code>添加目录</code>，在弹出的对话框中（工程目录下）创建<code>ui</code>文件夹，并将之前下载的<code>textwindow.png</code>放入该文件夹。再次右键选择<code>添加文件</code>，选择刚才放入的文件，点击确定。如图所示</p>
+<p><img alt="" src="../images/quickstart-4.PNG" /></p>
+<p>双击打开<code>main.bkscr</code>，将下面内容复制，并覆盖原有内容：</p>
+<pre><code class="javascript">*main
+[textwindow file=&quot;ui/textwindow.png&quot; pos=[126,450] rect=[20,55,1008,231]]
+你好，世界！[p]
+@quit
+</code></pre>
+
+<p>调试运行，可以看到文字已经在文字框中显示。这时白色的字体就不太合适了，可以通过之前的「游戏设置对话框」将文字改为黑色，黑色的颜色值为<code>0x000000</code>。
+最终效果：
+<img alt="最终效果" src="../images/quickstart-5.PNG" /></p>
+<p>你可以调整<code>textwindow</code>指令的<code>pos</code>或<code>rect</code>参数的数字大小，看看会发生什么？
+P.S. 在<code>textwindow</code>或每个参数的末尾按分号键，可以弹出代码提示，按回车确认。试试更多功能吧！</p>
+<h2 id="_6">修改文字样式<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>本节介绍如何修改文字框内文字的字号和颜色等，使用<code>textstyle</code>指令。
+将脚本改为：</p>
+<pre><code class="javascript">*main
+[textwindow file=&quot;ui/textwindow.png&quot; pos=[126,450] rect=[20,55,1008,231]]
+你好，世界！[p]
+[textstyle size=16 color=0xff0000]
+你好，世界！现在，字号和颜色一定发生了改变。[p]
+@quit
+</code></pre>
+
+<p>运行一下，你将看到效果。
+<code>textstyle</code>命令还能为文字增加粗体、斜体、删除线等等功能，请自行研究，我们会在后续的文档中详细说明。</p>
+<h2 id="_7">显示背景<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>说了这么半天，怎么能没有背景图片呢！下面将介绍如何用 BKEngine 显示背景图片。
+在工程目录下创建<code>images</code>文件夹，并按照之前的步骤，添加到资源中，<strong><a href="../examples/BG32a_1280.jpg">点击此处下载所需的素材文件</a></strong>，并放入<code>images</code>文件夹内，在Creator的资源处右键添加。</p>
+<p>之后，将下面内容全部复制进<code>main.bkscr</code>：</p>
+<pre><code class="javascript">*main
+[sprite index=10 file=&quot;images/BG32a_1280&quot;]
+[addto index=10 target=basic_layer zorder=0 pos=[0,0] opacity=255 ]
+
+[textwindow file=&quot;ui/textwindow.png&quot; pos=[126,450] rect=[20,55,1008,231]]
+你好，世界！[p]
+[textstyle size=16 color=0xff0000]
+你好，世界！现在，字号和颜色一定发生了改变。[p]
+@quit
+</code></pre>
+
+<p>运行，可以看到游戏有了背景图片！</p>
+<p><img alt="背景图片效果" src="../images/quickstart-6.PNG" /></p>
+<p>我们再回过头来看看我们刚才到底做了什么。
+在原有的对话之上，可以看到多出了新的两行命令。这两行命令就是用于添加图像的命令。在游戏里，无论是背景还是立绘，或是漫天飞舞的樱花花瓣，它们的本质都是图像；在BKE中，我们将这些图像统称为<code>精灵 （sprite）</code>。</p>
+<p>在上面的第二行，我们就使用了<code>sprite</code>命令声明了一张图像。它的编号（index）是10号，图像文件是<code>images</code>文件夹下的<code>BG32a_1280</code>——等等，后缀名哪去了？
+BKEngine 有很多人性化的地方，这就是其中之一。您可以不填写图像的后缀名，交由引擎来自动搜索，一旦BKEngine搜索到了符合名称的文件，就会自动使用这个文件。如果您在之前的<code>config.bkpsr</code>中指定了搜索图像文件的文件夹，那么您<em>甚至可以不写图像的所在文件夹</em>。</p>
+<p>在声明了精灵后，接下来的步骤就是将它添加到屏幕上。第三行的<code>addto</code>命令作用就是将精灵添加到指定的位置。
+在第二行用<code>sprite</code>声明了一个精灵后，第三行我们使用<code>addto</code>命令将其添加到了<code>basic_layer</code>这个层上。层级可以是用户自己定义的，也可以是BKE中默认定义的层。在BKE中，预先定义的层有两个，它们分别是<code>basic_layer</code>和<code>message_layer</code>。前者是基础层，后者是用于显示文字消息的层。它们的默认属性如下：</p>
+<pre><code class="javascript">basic_layer index=-1 zorder=0
+message_layer index=-2 zorder=50
+</code></pre>
+
+<p>例子里面，我们将图片的 zorder 设置为了0。</p>
+<p>在BKE中，对于处于同一层级的精灵来说， zorder 的值越大，精灵的显示位置就越靠近眼睛；对于不同层级的精灵来说，如果A精灵所在层级的 zorder要低于B精灵所在的层级，那么无论怎样增加A精灵的 zorder 值，A精灵都不可能显示在B精灵之前；对于同层级同 zorder 的精灵来说，后添加（addto）者在上。
+在看完剩余的命令参数解释后，您可以自行添加一些图片到屏幕上，以更好的理解精灵的层级关系。</p>
+<p>因为添加的图片是背景文件，所以我们将它的显示座标设置为<code>[0, 0]</code>， 以便于让图片正确的覆盖整个背景。但严格的来说，这个<code>[0, 0]</code>其实并不是指屏幕的左上角，而是指的是相对于<code>basic_layer</code>的偏移量。对于初学者而言，我们建议您将所有的目标层都设置为<code>basic_layer</code>，这样的话，所有的坐标都是相对于左上角原点<code>[0, 0]</code>来计算的（即和通常的坐标轴没有任何区别）。</p>
+<p>最后一个参数是精灵的不透明度，值的范围从0到255，值越大越不透明。例子中的精灵是完全不透明的。</p>
+<h2 id="_8">显示人物立绘<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>在了解了声明精灵和添加精灵之后，我们就可以如法炮制，再添加几个其它的精灵了。现在让我们添加上角色的立绘图像。
+下载人物立绘：<a href="../examples/A_happy.png">立绘A</a> <a href="../examples/B_wordless.png">立绘B</a>  并保存到<code>images</code>文件夹中。</p>
+<p>复制以下内容，替换<code>main.bkscr</code>：</p>
+<pre><code class="javascript">*main
+[sprite index=10 file=&quot;images/BG32a_1280.jpg&quot;]
+[addto index=10 target=basic_layer zorder=0 pos=[0,0] opacity=255]
+[textwindow file=&quot;ui/textwindow.png&quot; pos=[126,450] rect=[20,55,1008,231]]
+
+[sprite index=11 file=&quot;images/A_happy&quot;]
+[addto index=11 target=basic_layer zorder=10 pos=[400,120] opacity=255]
+[sprite index=12 file=&quot;images/B_wordless&quot;]
+[addto index=12 target=basic_layer zorder=10 pos=[640,120] opacity=255]
+
+【凉子】[r]
+抱歉，等很久了么？？[p]
+【真由】[r]
+啊，真是的，凉子你怎么那么慢？[p]
+
+@quit
+</code></pre>
+
+<p>运行一下试试看！</p>
+<p><img alt="立绘图片效果" src="../images/quickstart-7.PNG" /></p>
+<p>现在它看起来更像一个游戏了——除了我们的文字显示，它还有一点小小的问题，我们会在接下来的小节里修复这个问题。</p>
+<h2 id="_9">将文字作为精灵显示<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>有的时候，我们需要在文字框以外的地方使用文字，这就要用到<strong>文字精灵（TextSprite）</strong>。
+下面，我们将演示如何使用文字精灵将人物的姓名显示在文字框上。</p>
+<p>复制并替换<code>main.bkscr</code>的内容：</p>
+<pre><code class="javascript">*main
+[sprite index=10 file=&quot;images/BG32a_1280.jpg&quot;]
+[addto index=10 target=basic_layer zorder=0 pos=[0,0] opacity=255]
+[textwindow file=&quot;ui/textwindow.png&quot; pos=[126,450] rect=[20,55,1008,231]]
+
+[sprite index=11 file=&quot;images/A_happy&quot;]
+[addto index=11 target=basic_layer zorder=10 pos=[400,120] opacity=255]
+[sprite index=12 file=&quot;images/B_wordless&quot;]
+[addto index=12 target=basic_layer zorder=10 pos=[640,120] opacity=255]
+
+[textsprite index=21 text=&quot;凉子&quot; size=24 color=0xffffff xinterval=3]
+[anchor index=21 set=&quot;center&quot;]
+[addto index=21 target=message_layer pos=[97,20]]
+抱歉，等很久了么？？[p]
+
+[textsprite index=21 text=&quot;真由&quot; size=24 color=0xffffff xinterval=3]
+[anchor index=21 set=&quot;center&quot;]
+[addto index=21 target=message_layer pos=[97,20]]
+啊，真是的，凉子你怎么那么慢？[p]
+
+美好的一天开始了[p]
+
+@quit
+</code></pre>
+
+<p><code>textsprite</code>指令是BKEngine的常用指令之一，作用是创建一个文字精灵，该精灵的用法与一般的精灵并无太大差别，仅在于内容的不同——一个是文字，一个是图像。任何精灵要想显示在屏幕上，都需要<code>addto</code>指令才能实现。
+<code>index</code>略去不讲，与<code>sprite</code>指令相同；
+<code>text</code>参数指定要显示的文字内容，<code>size</code>指定字号，<code>color</code>则是文字颜色。<code>xinterval</code>指令是说文字之间的横向间距（字间距），与此对应的还有<code>yinterval</code>，即行间距。</p>
+<p><code>anchor</code>指令是确定精灵的「锚点」，锚点是精灵上的一个特定的坐标点，在执行<code>addto</code>指令时，锚点所处的位置就是<code>pos</code>参数指定的坐标。通过调整锚点，可以实现精灵相对于所在层的左、右对齐和居中等效果。<code>set</code>参数可接受坐标数组（如[0, 0]）也可接受数个内置的位置字符串，如“center”是将锚点设置在了精灵的正中心。
+有关<code>anchor</code>的更多信息请查阅后续文档。</p>
+<p><img alt="文字精灵效果" src="../images/quickstart-8.PNG" /></p>
+<p>运行一下，会发现姓名可以显示在黑色的姓名框区域了，但仍然有点小问题，即在显示最后一句话（旁白）的时候，本该没有姓名显示，那么如何从屏幕移除一个精灵呢？</p>
+<h2 id="_10">从屏幕移除精灵或文字精灵<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>移除精灵或文字精灵的方法是完全相同的，即使用<code>remove</code>指令。
+在<code>美好的一天开始了[p]</code> 前插入一行：</p>
+<pre><code class="javascript">[remove index=21 delete=true]
+</code></pre>
+
+<p>运行一下，姓名是不是自动删除了？下面我们讲解一下：
+<code>remove</code>指令的作用是从屏幕移除一个精灵（包括文字精灵），<code>index</code>参数指定精灵编号，<code>delete</code>指令是说在移除掉精灵后，是否从内存中删除这段数据。我们建议，若该精灵在remove后不会或很长时间后才会被再次addto，这种情况下建议设置<code>delete=true</code>。</p>
+<h2 id="macro">宏（Macro）<a class="headerlink" href="#macro" title="Permanent link">&para;</a></h2>
+<p>这一小节可能比较抽象，对没有编程基础的人来说不太好理解，你只要按照教程提示操作即可，在以后的使用中将会慢慢理解这个概念。
+宏是一段特定的程序，使用它可以简化制作过程，减少很多重复的代码编写工作。</p>
+<p>双击打开<code>macro.bkscr</code>，将内容替换为：</p>
+<pre><code class="javascript">*register
+//这之间写上要定义的宏或导入其他的宏文件
+[macro name=&quot;namebox&quot; text]
+[return]
+
+//在下面写上宏的实现部分
+
+*namebox
+[textsprite index=21 text=text size=24 color=0xffffff xinterval=3]
+[anchor index=21 set=&quot;center&quot;]
+[addto index=21 target=message_layer pos=[97,20]]
+@return
+</code></pre>
+
+<p>双击打开<code>main.bkscr</code>，将内容替换为：（对比之前的代码，哪里修改了？）</p>
+<pre><code class="javascript">*main
+[sprite index=10 file=&quot;images/BG32a_1280.jpg&quot;]
+[addto index=10 target=basic_layer zorder=0 pos=[0,0] opacity=255]
+[textwindow file=&quot;ui/textwindow.png&quot; pos=[126,450] rect=[20,55,1008,231]]
+
+[sprite index=11 file=&quot;images/A_happy&quot;]
+[addto index=11 target=basic_layer zorder=10 pos=[400,120] opacity=255]
+[sprite index=12 file=&quot;images/B_wordless&quot;]
+[addto index=12 target=basic_layer zorder=10 pos=[640,120] opacity=255]
+
+[namebox text=&quot;凉子&quot;]
+抱歉，等很久了么？？[p]
+
+[namebox text=&quot;真由&quot;]
+啊，真是的，凉子你怎么那么慢？[p]
+
+[remove index=21 delete=true]
+美好的一天开始了[p]
+
+@quit
+</code></pre>
+
+<p>运行一下，效果应该与上一图完全一样。
+通过宏，我们把本该三行才能实现的姓名显示效果替换为了一行。</p>
+<h2 id="_11">声音、音乐和音效<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>许多视觉小说都需要音乐来渲染气氛。在BKE中，音乐有三种：背景音乐、音效、语音。分为三种并不是说它们本质上有什么区别，而是BKE处理它们的方式不同。让我们来看看BKE对于这三种不同音乐的处理方式：
+1. 对于背景音乐，可以设置它的循环起始点，这意味着你可以直接截取音频文件的某一段作为背景音乐播放，而不用对其进行任何的处理。
+2. 背景音乐和语音都有自己默认的声音通道（channel），它们分别是是<code>bgm</code>和<code>voice</code>。
+3. 音效文件需要用户自行指定其播放的通道</p>
+<p>在工程目录下创建<code>sound</code>文件夹，下载<a href="../examples/tam-n16.ogg">背景音乐</a>和<a href="../examples/streets_afternoon.mp3">音效声音</a>，放入该文件夹，并在Creator中进行资源添加。
+播放一个背景音乐：</p>
+<pre><code class="javascript">[bgm file=&quot;sound/tam-n16.ogg&quot; fadein=200 loop=true vol=100]
+</code></pre>
+
+<p><code>bgm</code>指令用于播放背景音乐，<code>fadein</code>指令指定音量淡入的时间，这里指定200毫秒；<code>loop</code>参数确认该音乐是否循环播放，设置为<code>true</code>表示循环播放；<code>vol</code>为音量，0为静音，100为最大。</p>
+<p>播放一个音效：</p>
+<pre><code class="javascript">[se file=&quot;sound/streets_afternoon.mp3&quot; channel=1 fadein=2000 loop=true vol=100]
+</code></pre>
+
+<p><code>se</code>指令用于播放一个音效，<code>channel</code>用于指定播放通道，一个通道同一时间只能播放一个文件，不同通道可以同时播放。</p>
+<p>播放语音：</p>
+<pre><code class="javascript">[voice file=&quot;文件名&quot; vol=100]
+</code></pre>
+
+<p><code>voice</code>用于播放语音。</p>
+<p>停止播放：</p>
+<pre><code class="javascript">[stop channel=1 fadeout=2000]
+</code></pre>
+
+<p><code>stop</code>指令用于停止某一通道的播放。<code>channel</code>指定通道号，也可以使用<code>channel=bgm</code>或<code>channel=voice</code>停止背景音乐或语音播放；<code>fadeout</code>表示声音淡出的时间。</p>
+<h2 id="_12">尾声<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>好了，现在你已经学会如何制作一个简单的视觉小说。</p>
+<p>你可以参照文档和教程，继续学习有关分支跳转、自定义界面等更多功能和指令。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../parser/" class="btn btn-neutral float-right" title="基本语法"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../old/animation/" class="btn btn-neutral" title="动画"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />本文档采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../old/animation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../parser/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

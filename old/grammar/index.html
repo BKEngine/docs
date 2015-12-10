@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>语法进阶 - BKEngine Documentary</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../themefix.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "语法进阶";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BKEngine Documentary</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">首页</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../faq/">常见问题（必看！）</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>旧教程</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../quickstart/">快速入门</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../image/">图像</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sound/">声音</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">语法进阶</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_1">语法及变量简介</a></li>
+                
+                    <li><a class="toctree-l4" href="#_2">脚本文件</a></li>
+                
+                    <li><a class="toctree-l4" href="#_3">基础变量</a></li>
+                
+                    <li><a class="toctree-l4" href="#bke">BKE命令的组成与语法</a></li>
+                
+                    <li><a class="toctree-l4" href="#go-for-the-next">Go for the next！</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../animation/">动画</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>新教程（施工中）</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../new/quickstart/">快速入门</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Parser 系统</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../parser/">基本语法</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../parser/engine/">特有函数</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BKEngine Documentary</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>旧教程 &raquo;</li>
+        
+      
+    
+    <li>语法进阶</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">语法及变量简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<hr />
+<p>在之前的新手教学中，我们简单地介绍了BKEngine的一些基础功能。<br />
+在本章教程中，我们将为您介绍BKE的基本语法规则以及基本的变量类型，为以后的学习做好铺垫。  </p>
+<h2 id="_2">脚本文件<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>BKEngine的脚本文件包括了游戏根目录下所有的 <code>.bkscr</code> 文件。BKEngine会自动按照unicode顺序搜索所有以 <code>.bkscr</code> 后缀名结尾的脚本文件进行编译，并读取编译后的二进制文件执行游戏。</p>
+<p>通常来说，组成一个BKE游戏的最小脚本是两个， <code>main.bkscr</code> 与 <code>macro.bkscr</code> (以 <code>.bkpsr</code> 结尾的是配置文件，不考虑在脚本文件范围中)。其余的都是用户自行增加的脚本。事实上，把脚本文件分成很多个是没有意义的，您可以通过指定跳转到某个文件中的标签，但它与在本文件中跳转并无二致。不过使用多个剧本通常易于进行游戏路线的梳理与模块的管理，所以具体怎么划分脚本其实是无所谓的，有些人喜欢一个大文件，而有些人则喜欢很多零碎的小文件，这完全取决于您自己的喜好。</p>
+<p>为了加速启动以及保护脚本，BKE Creator带有能将 <code>.bkscr</code> 编译成二进制的 <code>.bkbin</code> 文件的编译器。而BKEngine则是通过读取 <code>.bkbin</code> 文件启动的，所以在您对您的游戏进行更改之后，请在BKE Creator中执行编译选项，更新您的 <code>.bkbin</code> 文件，从而确保您的游戏是最新的版本。</p>
+<p>编译器会自动搜索根目录与 <code>config.bkpsr</code> 中设置的放置的脚本文件夹中的脚本进行编译。如果您不想将脚本全放在根目录下的话，您可以通过BKE Creator配置 <code>config.bkpsr</code> 中的预设脚本搜索文件夹，来更改编译器的脚本搜索路径。</p>
+<h2 id="_3">基础变量<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>变量可视为在内存里可修改的、存在值的命名空间。<br />
+当某个已宣告变量开始使用，引擎会设定一个空间来储存所给出的值。稍后该变量不再使用时，那些空间将会回收。 变量可以用来存储诸如游戏的好感度、人物的HP、游戏进行的路线等。<br />
+在BKE中，声明变量时的写法如下：</p>
+<pre><code>#var 变量名;
+</code></pre>
+<p>这样所声明的变量作用域为当前闭包（“{}”内），若是在所有作用域之外直接使用 <code>var</code> 声明变量，那么该变量会成为全局变量。</p>
+<p>在声明变量的同时，可以通过等号对其赋值：</p>
+<pre><code>#var 变量名=值;
+</code></pre>
+<h3 id="_4">变量的命名<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>在BKE中,变量名由下划线或大小写英文字符或中文字符开头，由下划线或字符或中文字符或数字组成，如：</p>
+<pre><code>#var a2;
+#var _aa;
+#var 中文变量;
+</code></pre>
+<p>但是您不能将变量命名为BKE内已经存在的保留字。例如：</p>
+<pre><code>#var while;      //错误，变量名是已经存在的关键字
+#var whileinit;   //正确，虽然包含关键字，但是并非关键字，所以该句正确
+</code></pre>
+<p>下面是BKE的保留字清单：</p>
+<pre><code>      for   foreach  in  extends  do  return  global  
+      while  function  propset  propget  int  this
+      string  number  typeof  var  delete  true  void
+      class  if  else  continue  break  false
+</code></pre>
+<h3 id="_5">变量的类型<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>对于BKE来说，与C/C++不同，您无需声明变量的类型，变量将自动被更改为赋值对象的类型，同时，在计算过程中，某些变量会自动根据上下文来改变自己的类型（仅限 <code>void</code> ， <code>number</code> ， <code>string</code> 之间）。</p>
+<p>虽然BKE的变量无需声明“类型”，但在系统内部变量实际上是拥有类型的。在BKE内的内部类型如下：</p>
+<h4 id="void">void(空)<a class="headerlink" href="#void" title="Permanent link">&para;</a></h4>
+<p><code>void</code> 表示空变量，当访问字典或数据里不存在的变量时会得到这个值。</p>
+<h4 id="number">number(数值)<a class="headerlink" href="#number" title="Permanent link">&para;</a></h4>
+<p>表示一个整数或一个浮点数(小数)。<br />
+整数格式：<br />
+  ［0｜0x｜0X］+数字或十六进制字母(在以 <code>0x</code> 开头时)。</p>
+<p>当数字以 <code>0x</code> 或 <code>0X</code> 开头时，后面的序列会被当成十六进制的数，其余情况被当成是十进制。如:</p>
+<pre><code>   0xA=10  //这是十六进制
+   0xc=12  //这也是十六进制
+   233=233 //十进制
+</code></pre>
+<p>浮点数格式:<br />
+  ［数字｜小数点+数字］+［e｜E+［加号或减号］+数字］，同时也支持上述的整数格式。</p>
+<p>在这种表示方法中， <code>E</code> 或者 <code>e</code> 代表的是指数，表示将前面的数字乘以 10 的 n 次幂，n 是 <code>E</code> 或者 <code>e</code> 之后的数字（带符号）。<br />
+当以数字加 <code>.</code> （小数点）开头时，此时变量会被当成十进制，以 <code>0x</code> 或 <code>0X</code> 开头时，会被当成十六进制（在非十进制的情况下， 用 p 来表示以 2 为底的指数)。如:</p>
+<pre><code>   2.33e2=233   //即2.33x10^2
+   23E-3=0.023  //即23x10^-3
+   0.5=0.5      //十进制小数
+   0x2.3ep10=2297    //即0x2.3e*2^10，等于2297
+</code></pre>
+<h4 id="string">string(字符串)<a class="headerlink" href="#string" title="Permanent link">&para;</a></h4>
+<p>一个不定长度，不可变的unicode字符串。由两个单引号或者双引号包围起来。例如：</p>
+<pre><code>   "这是一个字符串"
+   "This is a string"
+</code></pre>
+<p>在字符串中 \ (反斜杠) 具有特殊的意义。跟在 \ 的字符的意义会改变。跟在 \ 后面的这种特殊的指定方式被称为转义(escape) 。</p>
+<p>BKE的字符串默认不支持转义字符，在由一头一尾两个双引号括起来的字符串中，连起来的双引号会被当成字符串内的一个双引号而不是字符串结束符号。在以单引号括起来时，字符串支持转义字符。</p>
+<p>要支持\n，\r，\t和 \ &rdquo; 这些转义字符，需要使用单引号将字符串括起来。比如：</p>
+<pre><code>   "abc"            //包含abc三个字母的字符串。
+   "abc""abc"       //以一个双引号隔开的两个abc。
+   "abc'abc"        //以一个单引号隔开的两个abc。
+   '\r\n'           //windows下的回车换行符。
+   'what\'s this'   //这里使用了 \' 来转义书写单引号
+</code></pre>
+<p>在BKE内部把所有字符用unicode格式来处理，全角字符按 1 个字符来计数，半角字符也是按 1 个字符来计数。</p>
+<h4 id="array">array(数组)<a class="headerlink" href="#array" title="Permanent link">&para;</a></h4>
+<p>由一组变量(任意类型)组成的类型，可以嵌套。可以通过数字下标来引用元素(负下标表示从后往前数)。需要用中括号括起来，元素间由逗号隔开。<br />
+在声明数组时，并不需要对数组的大小做出定义。BKE将会自动扩展数组大小到用户所使用的大小，并将没有被赋值的元素初始化为 <code>void</code> 。</p>
+<p>对于数组，我们可以通过其下标来对其中的元素进行索引。下标为整数，0表示数组中的第一个元素，1表示第二个对象，依此类推。如果指定负数作为索引，则将被当作从数组的结束位置开始指定元素，-1 表示最后的元素。</p>
+<p>下面是声明一个数组的例子：</p>
+<pre><code>#var count=[];                   //声明一个空数组count
+#var sum=["chara",100,[50,55]]   //声明一个有默认元素的数组sum
+</code></pre>
+<p>这是引用数组内元素的例子：</p>
+<pre><code>sum[0]    //sum[0]即数组sum的第一个元素，字符串"chara"
+sum[1]    //sum[1]即数组sum的第二个元素，数字100
+sum[-1]   //sum[-1]即数组sum的最后一个元素，数组[50,55]
+sum[-2]   //sum[-2]即数组sum的倒数第二个元素，数字100
+sum[2][1] //sum[2]即数组sum的最后一个元素，数组[50,55]，同时第二个中括号内的是sum数组内这个数组的下标，即sum数组内数组的第二个元素，数字55
+sum[3]    //数组的第四个元素，未定义，BKE将会自动扩展数组sum至四个大小，同时将sum[3]赋值为 void
+</code></pre>
+<h4 id="dictionary">dictionary(字典)<a class="headerlink" href="#dictionary" title="Permanent link">&para;</a></h4>
+<p>由一些键-值对组成的变量，键为字符串型，值可以是任意类型的变量，可以嵌套。可以通过字符串下标来引用元素。字典由 <code>%[</code> 开头， <code>]</code> 结尾，键-值对之间用逗号隔开，键和值之间用冒号隔开。若值被省略，则BKE将会报错。<br />
+BKE中的字典类型没有顺序，系统会自动按照Hash顺序来排序。</p>
+<p>对于字典的声明并赋值，有两种写法：</p>
+<pre><code>#var book=%[page:100,price:10,name:"dict"];
+#var book=%["page"=&gt;100,"price"=&gt;10,"name"=&gt;"dict"];
+</code></pre>
+<p>以上两种写法都是可以的。后者的写法更类似于 Perl 。但是请您注意，后者的写法中，键的名称被双引号括了起来，而在前者的写法中，键的名称则不用加双引号。在使用后者写法的场合，请注意一定要在键的名称上加上双引号，否则系统将会报错。</p>
+<p>对于字典的值的引用，也有两种写法：</p>
+<pre><code>book.price  //返回的值为10
+book["price"]   //返回的值为10
+</code></pre>
+<p><code>.</code> 运算符在BKE Parser中起着直接成员选择的作用，所以上面两种写法是等价的，后者的写法对于使用 Python 或 Perl 的用户来说可能会更亲切一些。</p>
+<h3 id="_6">常量<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>在BKE中，有两个关键字： <code>true</code> 和 <code>false</code> ，它们分别代表逻辑值真与逻辑值假。它们的值为1与0。</p>
+<h3 id="_7">变量的自动转换<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>根据运算的需要，变量的类型有时候会被自动转换，但仅限于 <code>void</code> ， <code>number</code> 和 <code>string</code> 之间。 <code>void</code> 会被转成0或者空字符串。</p>
+<p>您也可以使用 <code>number(变量名)</code> 和 <code>string(变量名)</code> 这两个命令进行强制转换（这样的强制转换不会影响原变量）。当数字转字符串时，只会显示六位，超过时会使用科学表示法或舍去小数点后更多的位数。字符串转数字会直到不合法的字符的时候停止。下面是例子：</p>
+<pre><code>  #string(100000)="100000"
+  #string(1000000)="1e+006"
+  #string(1.2345678)="1.23457"
+  #string(0.000233)="0.000233"
+  #string(0.0000233)="2.33e-005"
+  #number("0x0a")=10
+</code></pre>
+<p>其余的转换（如number到array）都是非法的。</p>
+<h2 id="bke">BKE命令的组成与语法<a class="headerlink" href="#bke" title="Permanent link">&para;</a></h2>
+<h3 id="_8">命令的组成<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>在BKE中，解释器会逐行解释脚本文件中的内容。BKE会根据关键字来判断当前的文字是命令、文本或是注释。</p>
+<p>对于任何以 “//” （两个半角斜杠）开始，该行在 “//” 之后的文本都会被视为注释。BKE会无视所有注释，即使注释后面拥有命令关键字。</p>
+<p>而对于命令来说，它们由一些非常基本的部分组成:</p>
+<p><strong><em>关键字</em></strong><br />
+  关键字是必须出现在脚本里的词语。它们用来声明接下来的部分是一个BKE命令。通常使用半角的 <strong><code>@</code></strong> 符号或是半角的 <strong><code>[</code></strong> 。对于 <strong><code>@</code></strong> 符号标记的命令而言，它只能出现在一行的行首位置，前面不能有任何东西。而以 <strong><code>[</code></strong> 符号标记的命令则可以出现在除注释外的任何位置。对于脚本标签，则使用 <strong><code>*</code></strong> 符号进行标记。</p>
+<p><strong><em>命令名</em></strong><br />
+  用于表明接下来的命令的名称，让BKE知道它应该接受哪些参数，起到什么样的作用。</p>
+<p><strong><em>参数名</em></strong><br />
+  参数名用来让BKE知道接下来传给引擎的是什么参数。参数名可以按照任意的顺序写出，只要任何参数名只出现一次。参数名与参数名之间使用空格分割。</p>
+<p><strong><em>参数值</em></strong><br />
+  对应参数名的值。值与参数名之间使用 <code>=</code> 号分割。</p>
+<p>下面是两个完整的命令，你可以看到它们拥有上面的所有属性：</p>
+<pre><code>@sprite index=1 file="image/character/A/1_normal"
+[sprite index=0 file="image/bg/BG25a_1280"]
+</code></pre>
+<p>除了命令与注释之外的文字，都会被当做文本显示出来。</p>
+<p>不过还有两个例外，就是以 “#” 开头的用于声明变量的命令，以及以 “##” 开头，以 “##” 结尾（中间可以跨行）的语句块，在其中的所有语句都会被传给BKE的语法分析器（BKE Parser）来执行。</p>
+<p>下面的例子就包含了所有可能在BKE中出现的文字：</p>
+<pre><code>*main
+@bgm file="sound/bgm/bgm_1" loop=true
+@basic_dialogbox
+@sprite index=0 file="image/bg/bg_1"
+@addto index=0 target=basic_layer pos=[0,0] zorder=0 opacity=255
+
+这就是——[l][r]
+属于我们的，美好的每一天。[p]
+
+#var ending=1;
+</code></pre>
+<h3 id="_9">语法<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>对于BKE命令来说，需要注意的问题不多，大部分BKE命令使用同一套语法，它们都由它们都由关键字开始，关键字后面是命令名，而后是参数名和参数（如果这个命令接受参数的话）。</p>
+<p>其实BKE的语法并没有太多复杂之处，真正拥有高度扩展性的是BKE Parser，我们会在以后的教程中详细介绍它，而它才是BKE强大之处的体现。</p>
+<h2 id="go-for-the-next">Go for the next！<a class="headerlink" href="#go-for-the-next" title="Permanent link">&para;</a></h2>
+<p>事实上，目录里面并没有这一节，不过我还是想把它当成一个小剧场一样的东西继续下去:D</p>
+<p>在学习了本章的内容之后，结合前面的东西，相信您已经可以很好的掌握BKE的语法了，但先别急着高兴，这其实只是冰山的一角=w=</p>
+<p>感谢您阅读本章的教程，希望在后面的教程也能遇见您～</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../animation/" class="btn btn-neutral float-right" title="动画"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../sound/" class="btn btn-neutral" title="声音"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />本文档采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../sound/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../animation/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

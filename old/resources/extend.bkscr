@@ -1,0 +1,88 @@
+﻿*register
+@macro name="basic_dialogbox"
+@macro name="select" file text label se
+@return
+
+*basic_dialogbox
+#update_x=(System.resolutionSize[0]/2)-400;
+#update_y=System.resolutionSize[1]-600;
+[textwindow pos=[15+update_x,444+update_y] rect=[10,5,760,116] xinterval=1 yinterval=1 opacity=190]
+[textstyle size=21 bold=false]
+
+[sprite index=500 file="image/menu/textwindow/main_flat_set"]
+[addto index=500 target=message_layer zorder=-13 pos=[-30,-10] opacity=180]
+[sprite index=501 file="image/menu/textwindow/main_flat_set2"]
+[addto index=501 target=message_layer zorder=-12 pos=[0,0] opacity=180]
+[return]
+
+
+*select
+@savepoint
+@if "typeof(text)!='array'"
+	#log("select：text参数需要一个数组");
+	@return false
+@elseif "typeof(label)!='array'"
+	#log("select：label参数需要一个数组");
+	@return false
+@elseif "text.size!=label.size"
+	#log("select：text和label元素数目应该相同");
+	@return false
+@endif
+
+#var size = label.size;
+@if "size < 2"
+#log("select：选择支数量应该不小于2");
+	@return false
+@endif
+#var indexes = [];
+@idlesp get=indexes num=size*3
+#var success = true;
+#var info1 = %[];
+@info file=file get=info1
+@if "!info1.size"
+	#log("select：file文件不存在：" + file);
+	@return false
+@endif
+#var zorder;
+@zorder index=message_layer get=zorder
+
+##
+function j(curi)
+{
+	if(se != void){
+		Channel(0).play(se);
+	}
+	for i=0,size-1{
+		Scripts.runCmd("action",%[mode:"fadeto", opacity:0, target:indexes[i*3+2], time:500]);
+	}
+	foreach ,i in indexes
+	{
+		Scripts.runCmd("remove",%[index:i, "delete"=>true]);
+	};
+	Scripts.jump(label[curi]);
+};
+##
+
+@action mode="queue"
+@for var=i range=range(size)
+	@sprite index=indexes[i*3] file=file
+	
+	@textsprite index=indexes[i*3+1] text=text[i] color=0xFFFFFF
+	@anchor index=indexes[i*3+1] set="center"
+	@addto index=indexes[i*3+1] target=indexes[i*3] pos=[info1.width/2, info1.height/2]
+	
+	@buttonex index=indexes[i*3+2] idle=indexes[i*3] onclick=[,,,"j("+i+")"]
+	#var info2 = %[]
+	@infoex index=indexes[i*3+2] get=info2
+	#log(info2);
+	#var winsize = System.resolutionSize;
+	#var w = ( winsize[0] - info2.width ) / 2;
+	#var h = ( winsize[1] - info2.height * size - ( size-1 ) * 50 ) / 2;
+	@addto index=indexes[i*3+2] target=basic_layer zorder=zorder pos=[w, h + i * ( 50 + info2.height )] opacity=0
+	@action mode="fadeto" opacity=255 time=400 target=indexes[i*3+2]
+@next
+@action mode="start" target=basic_layer
+
+@waitbutton
+@return true
+

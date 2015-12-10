@@ -1,0 +1,14 @@
+*{
+	font-family: "Hiragino Sans GB", 
+				"Microsoft YaHei", 
+				"微软雅黑", 
+				"思源黑体 Regular",
+				"Noto Sans S Chinese Regular",
+				"文泉驿微米黑",
+				sans-serif !important; 
+	line-height: 1.5;
+}
+
+code{
+  font-size: inherit !important;
+}

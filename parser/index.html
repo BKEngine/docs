@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>基本语法 - BKEngine Documentary</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../themefix.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "基本语法";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> BKEngine Documentary</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">首页</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../faq/">常见问题（必看！）</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>旧教程</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../old/quickstart/">快速入门</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../old/image/">图像</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../old/sound/">声音</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../old/grammar/">语法进阶</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../old/animation/">动画</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>新教程（施工中）</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../new/quickstart/">快速入门</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Parser 系统</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">基本语法</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_1">全局函数</a></li>
+                
+                    <li><a class="toctree-l4" href="#appendfile">appendFile</a></li>
+                
+                    <li><a class="toctree-l4" href="#char">char</a></li>
+                
+                    <li><a class="toctree-l4" href="#clock">clock</a></li>
+                
+                    <li><a class="toctree-l4" href="#eval">eval</a></li>
+                
+                    <li><a class="toctree-l4" href="#evalfile">evalFile</a></li>
+                
+                    <li><a class="toctree-l4" href="#hash">hash</a></li>
+                
+                    <li><a class="toctree-l4" href="#hash16">hash16</a></li>
+                
+                    <li><a class="toctree-l4" href="#itoa">itoa</a></li>
+                
+                    <li><a class="toctree-l4" href="#itoa2">itoa2</a></li>
+                
+                    <li><a class="toctree-l4" href="#loadclass">loadClass</a></li>
+                
+                    <li><a class="toctree-l4" href="#loadfile">loadFile</a></li>
+                
+                    <li><a class="toctree-l4" href="#log">log</a></li>
+                
+                    <li><a class="toctree-l4" href="#print">print</a></li>
+                
+                    <li><a class="toctree-l4" href="#random">random</a></li>
+                
+                    <li><a class="toctree-l4" href="#range">range</a></li>
+                
+                    <li><a class="toctree-l4" href="#savefile">saveFile</a></li>
+                
+                    <li><a class="toctree-l4" href="#time">time</a></li>
+                
+                    <li><a class="toctree-l4" href="#tostring">toString</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_57">全局类</a></li>
+                
+                    <li><a class="toctree-l4" href="#date">类Date</a></li>
+                
+                    <li><a class="toctree-l4" href="#flags">类Flags</a></li>
+                
+                    <li><a class="toctree-l4" href="#math">类Math</a></li>
+                
+                    <li><a class="toctree-l4" href="#regex">类Regex</a></li>
+                
+                    <li><a class="toctree-l4" href="#array">类array</a></li>
+                
+                    <li><a class="toctree-l4" href="#dictionary">类dictionary</a></li>
+                
+                    <li><a class="toctree-l4" href="#string">类string</a></li>
+                
+                    <li><a class="toctree-l4" href="#undefined">类undefined</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="engine/">特有函数</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">BKEngine Documentary</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Parser 系统 &raquo;</li>
+        
+      
+    
+    <li>基本语法</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">全局函数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="appendfile">appendFile<a class="headerlink" href="#appendfile" title="Permanent link">&para;</a></h2>
+<h3 id="_2">简介<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>将一个字符串添加到文件末尾。等同于<a href="#saveFile" title="saveFile">saveFile</a>(filename, str, -1);</p>
+<h3 id="_3">原型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">bool appendFile(string filename, string str);
+</code></pre>
+
+<h3 id="_4">参数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>文件名</td>
+</tr>
+<tr>
+<td>str</td>
+<td>将要保存的字符串</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">返回<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>是否成功</p>
+<h2 id="char">char<a class="headerlink" href="#char" title="Permanent link">&para;</a></h2>
+<h3 id="_6">简介<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>返回str[0]对应的unicode编码。没有则返回0。</p>
+<h3 id="_7">原型<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">integer char(string str);
+</code></pre>
+
+<h2 id="clock">clock<a class="headerlink" href="#clock" title="Permanent link">&para;</a></h2>
+<h3 id="_8">简介<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>返回当前的时间戳（单位ms）。</p>
+<h3 id="_9">原型<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">number clock();
+</code></pre>
+
+<h2 id="eval">eval<a class="headerlink" href="#eval" title="Permanent link">&para;</a></h2>
+<h3 id="_10">简介<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>返回str的执行结果。</p>
+<h3 id="_11">原型<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">anytype eval(string str);
+</code></pre>
+
+<h2 id="evalfile">evalFile<a class="headerlink" href="#evalfile" title="Permanent link">&para;</a></h2>
+<h3 id="_12">简介<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>对文件读取并且解析（反序列化），将结果返回。</p>
+<h3 id="_13">原型<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">var evalFile(string filename, bool krmode = false, bool rawstr = false);
+</code></pre>
+
+<h3 id="_14">参数<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>文件名</td>
+</tr>
+<tr>
+<td>krmode</td>
+<td>若为真，表示双引号字符串可以像单引号字符串一样使用转义（此时不使用原有的&rdquo;&ldquo;表示&rdquo;的功能）</td>
+</tr>
+<tr>
+<td>rawstr</td>
+<td>若为真，表示字符串可以跨行</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_15">返回<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>反序列化的结果</p>
+<h3 id="_16">说明<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>等同于<a href="#eval" title="eval">eval</a>(<a href="#loadFile" title="loadFile">loadFile</a>(filename, krmode, rawstr));</p>
+<h2 id="hash">hash<a class="headerlink" href="#hash" title="Permanent link">&para;</a></h2>
+<h3 id="_17">简介<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p>返回value对应的32位hash值。</p>
+<h3 id="_18">原型<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">integer hash(anytype value);
+</code></pre>
+
+<h2 id="hash16">hash16<a class="headerlink" href="#hash16" title="Permanent link">&para;</a></h2>
+<h3 id="_19">简介<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>返回value对应的hash值（short版本）。</p>
+<h3 id="_20">原型<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">integer hash16(anytype value);
+</code></pre>
+
+<h2 id="itoa">itoa<a class="headerlink" href="#itoa" title="Permanent link">&para;</a></h2>
+<h3 id="_21">简介<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>相当于(string)(int)num，先对数字取整，然后生成相应的字符串。</p>
+<h3 id="_22">原型<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">string itoa(number num);
+</code></pre>
+
+<h2 id="itoa2">itoa2<a class="headerlink" href="#itoa2" title="Permanent link">&para;</a></h2>
+<h3 id="_23">简介<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<p>同itoa，只是生成的字符串是全角的&lsquo;０&rsquo;, &lsquo;１&rsquo;等字符。</p>
+<h3 id="_24">原型<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">string itoa2(number num);
+</code></pre>
+
+<h2 id="loadclass">loadClass<a class="headerlink" href="#loadclass" title="Permanent link">&para;</a></h2>
+<h3 id="_25">简介<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<p>内部用，用于从保存的类对象中还原。</p>
+<h3 id="_26">原型<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">class loadClass(string classname, sictionary dic[, anytype nativedata)
+</code></pre>
+
+<h3 id="_27">返回<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<p>instance</p>
+<h2 id="loadfile">loadFile<a class="headerlink" href="#loadfile" title="Permanent link">&para;</a></h2>
+<h3 id="_28">简介<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<p>读取一个文件，返回里面的原始内容（字符串）</p>
+<h3 id="_29">原型<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">string loadFile(string filename);
+</code></pre>
+
+<h3 id="_30">参数<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>文件名</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_31">示例<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<p>以下将演示一个从内容为</p>
+<pre><code>abc
+</code></pre>
+<p>的1.txt文件载入为数组的示例：</p>
+<h4 id="_32">示例代码<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
+<pre><code class="c++">[].loadFile(&quot;1.txt&quot;)
+</code></pre>
+
+<h4 id="_33">运行结果<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h4>
+<pre><code class="c++">&quot;abc&quot;
+</code></pre>
+
+<h2 id="log">log<a class="headerlink" href="#log" title="Permanent link">&para;</a></h2>
+<h3 id="_34">简介<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<p>逐个打印参数，逗号分隔。</p>
+<h3 id="_35">原型<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">void log([anytype value1, anytype value2, ...)
+</code></pre>
+
+<h2 id="print">print<a class="headerlink" href="#print" title="Permanent link">&para;</a></h2>
+<h3 id="_36">简介<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
+<p>逐个打印字符串内容（没有双引号），逗号分隔。</p>
+<h3 id="_37">原型<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">void print([string str1, string str2, ...)
+</code></pre>
+
+<h2 id="random">random<a class="headerlink" href="#random" title="Permanent link">&para;</a></h2>
+<h3 id="_38">简介<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h3>
+<p>生成一个随机整数。</p>
+<h3 id="_39">原型<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">void random(number num1
+
+number num1, number num2
+</code></pre>
+
+<h3 id="_40">说明<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
+<p>如果是第一种形式，那么相当于random(0, num1)。</p>
+<p>如果是第二种形式，那么：</p>
+<p>如果num2&gt;num1，那么生成的是num1到num2-1之间的一个整数</p>
+<p>如果num2&lt;num1，那么生成的是num2到num1-1之间的一个整数</p>
+<p>如果num2=num1，那么返回num1</p>
+<h2 id="range">range<a class="headerlink" href="#range" title="Permanent link">&para;</a></h2>
+<h3 id="_41">简介<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h3>
+<p>生成一个数组。</p>
+<h3 id="_42">原型<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">void range(number num1
+
+number num1, number num2
+</code></pre>
+
+<h3 id="_43">说明<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h3>
+<p>如果是第一种形式，那么生成的是[0, 1, &hellip;, num1-1]</p>
+<p>如果是第二种形式，那么：</p>
+<p>如果num2&gt;num1，那么生成的是[num1, num1+1, &hellip;, num2-1]</p>
+<p>如果num2&lt;num1，那么生成的是[num1, num1-1, &hellip;, num2+1]</p>
+<p>如果num2=num1，那么生成的是空数组</p>
+<h2 id="savefile">saveFile<a class="headerlink" href="#savefile" title="Permanent link">&para;</a></h2>
+<h3 id="_44">简介<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h3>
+<p>将一个字符串写入文件。</p>
+<h3 id="_45">原型<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">bool saveFile(string filename, string str, bool append = false);
+</code></pre>
+
+<h3 id="_46">参数<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>文件名</td>
+</tr>
+<tr>
+<td>str</td>
+<td>将要保存的字符串</td>
+</tr>
+<tr>
+<td>append</td>
+<td>是否追加在文件末尾。若为否，则覆盖整个文件。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_47">返回<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h3>
+<p>是否成功</p>
+<h2 id="time">time<a class="headerlink" href="#time" title="Permanent link">&para;</a></h2>
+<h3 id="_48">简介<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h3>
+<p>执行str，然后返回执行用的时间（单位ms）。</p>
+<h3 id="_49">原型<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">number time(string str);
+</code></pre>
+
+<h2 id="tostring">toString<a class="headerlink" href="#tostring" title="Permanent link">&para;</a></h2>
+<h3 id="_50">简介<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h3>
+<p>将value转变成字符串，format表示是否加上缩进格式。</p>
+<h3 id="_51">原型<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h3>
+<pre><code class="c++">string toString(anytype value, bool format);
+</code></pre>
+
+<h3 id="_52">示例<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h3>
+<p>以下将演示一个数组[1,2,3]的toString结果</p>
+<h4 id="_53">示例代码<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h4>
+<pre><code class="c++">toString([1,2,3])
+</code></pre>
+
+<h4 id="_54">运行结果<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h4>
+<pre><code class="c++">[1,2,3]
+</code></pre>
+
+<h4 id="_55">示例代码<a class="headerlink" href="#_55" title="Permanent link">&para;</a></h4>
+<pre><code class="c++">toString([1,2,3], true)
+</code></pre>
+
+<h4 id="_56">运行结果<a class="headerlink" href="#_56" title="Permanent link">&para;</a></h4>
+<pre><code class="c++">[
+
+{@t}1,
+
+{@t}2,
+
+{@t}3
+
+]
+</code></pre>
+
+<h1 id="_57">全局类<a class="headerlink" href="#_57" title="Permanent link">&para;</a></h1>
+<h2 id="date">类Date<a class="headerlink" href="#date" title="Permanent link">&para;</a></h2>
+<p>时间类。</p>
+<p><strong>可实例化。</strong></p>
+<p>使用Date()直接创建，时间为当前时间。</p>
+<h3 id="_58">函数<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h3>
+<h4 id="format">format<a class="headerlink" href="#format" title="Permanent link">&para;</a></h4>
+<h5 id="_59">简介<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h5>
+<p>根据提供的格式化字串返回格式化后的字符串。</p>
+<h5 id="_60">原型<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">格式化后的字符串 format(string formatString);
+</code></pre>
+
+<h5 id="_61">参数<a class="headerlink" href="#_61" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>formatString</td>
+<td>格式字符串</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_62">说明<a class="headerlink" href="#_62" title="Permanent link">&para;</a></h5>
+<p>格式化字串里：%Y，%M，%D，%h，%m，%s分别表示全宽度的年份（四位）、月份（两位）、日期（两位）、24小时制的小时（两位）、分钟（两位）、秒（两位）</p>
+<p>%#Y，%#M，%#D，%#h，%#m，%#s分别表示压缩宽度，其中年份固定为两位，其余的在前面有无效0的时候会省略0</p>
+<p>%%代表一个%</p>
+<h4 id="getday">getDay<a class="headerlink" href="#getday" title="Permanent link">&para;</a></h4>
+<h5 id="_63">简介<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h5>
+<p>返回当前的日期(1-31)。</p>
+<h5 id="_64">原型<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number getDay();
+</code></pre>
+
+<h5 id="_65">返回<a class="headerlink" href="#_65" title="Permanent link">&para;</a></h5>
+<p>日期</p>
+<h4 id="gethour">getHour<a class="headerlink" href="#gethour" title="Permanent link">&para;</a></h4>
+<h5 id="_66">简介<a class="headerlink" href="#_66" title="Permanent link">&para;</a></h5>
+<p>返回现在的小时(0-23)。</p>
+<h5 id="_67">原型<a class="headerlink" href="#_67" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number getHour();
+</code></pre>
+
+<h5 id="_68">返回<a class="headerlink" href="#_68" title="Permanent link">&para;</a></h5>
+<p>小时</p>
+<h4 id="getminute">getMinute<a class="headerlink" href="#getminute" title="Permanent link">&para;</a></h4>
+<h5 id="_69">简介<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h5>
+<p>返回现在的分钟(0-59)。</p>
+<h5 id="_70">原型<a class="headerlink" href="#_70" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number getMinute();
+</code></pre>
+
+<h5 id="_71">返回<a class="headerlink" href="#_71" title="Permanent link">&para;</a></h5>
+<p>分钟</p>
+<h4 id="getmonth">getMonth<a class="headerlink" href="#getmonth" title="Permanent link">&para;</a></h4>
+<h5 id="_72">简介<a class="headerlink" href="#_72" title="Permanent link">&para;</a></h5>
+<p>返回当前的月份(1-12)。</p>
+<h5 id="_73">原型<a class="headerlink" href="#_73" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number getMonth();
+</code></pre>
+
+<h5 id="_74">返回<a class="headerlink" href="#_74" title="Permanent link">&para;</a></h5>
+<p>月份</p>
+<h4 id="getsecond">getSecond<a class="headerlink" href="#getsecond" title="Permanent link">&para;</a></h4>
+<h5 id="_75">简介<a class="headerlink" href="#_75" title="Permanent link">&para;</a></h5>
+<p>返回现在的秒数(0-59)。</p>
+<h5 id="_76">原型<a class="headerlink" href="#_76" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number getSecond();
+</code></pre>
+
+<h5 id="_77">返回<a class="headerlink" href="#_77" title="Permanent link">&para;</a></h5>
+<p>秒数</p>
+<h4 id="getyear">getYear<a class="headerlink" href="#getyear" title="Permanent link">&para;</a></h4>
+<h5 id="_78">简介<a class="headerlink" href="#_78" title="Permanent link">&para;</a></h5>
+<p>返回当前的年份。</p>
+<h5 id="_79">原型<a class="headerlink" href="#_79" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number getYear();
+</code></pre>
+
+<h5 id="_80">返回<a class="headerlink" href="#_80" title="Permanent link">&para;</a></h5>
+<p>年份</p>
+<h4 id="setday">setDay<a class="headerlink" href="#setday" title="Permanent link">&para;</a></h4>
+<h5 id="_81">简介<a class="headerlink" href="#_81" title="Permanent link">&para;</a></h5>
+<p>设置当前的日期(1-31)。</p>
+<h5 id="_82">原型<a class="headerlink" href="#_82" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void setDay(value );
+</code></pre>
+
+<h4 id="sethour">setHour<a class="headerlink" href="#sethour" title="Permanent link">&para;</a></h4>
+<h5 id="_83">简介<a class="headerlink" href="#_83" title="Permanent link">&para;</a></h5>
+<p>设置当前的小时(0-23)。</p>
+<h5 id="_84">原型<a class="headerlink" href="#_84" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void setHour(value );
+</code></pre>
+
+<h4 id="setminute">setMinute<a class="headerlink" href="#setminute" title="Permanent link">&para;</a></h4>
+<h5 id="_85">简介<a class="headerlink" href="#_85" title="Permanent link">&para;</a></h5>
+<p>设置当前的分钟(0-59)。</p>
+<h5 id="_86">原型<a class="headerlink" href="#_86" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void setMinute(value );
+</code></pre>
+
+<h4 id="setmonth">setMonth<a class="headerlink" href="#setmonth" title="Permanent link">&para;</a></h4>
+<h5 id="_87">简介<a class="headerlink" href="#_87" title="Permanent link">&para;</a></h5>
+<p>设置当前的月份(1-12)。</p>
+<h5 id="_88">原型<a class="headerlink" href="#_88" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void setMonth(value );
+</code></pre>
+
+<h4 id="setsecond">setSecond<a class="headerlink" href="#setsecond" title="Permanent link">&para;</a></h4>
+<h5 id="_89">简介<a class="headerlink" href="#_89" title="Permanent link">&para;</a></h5>
+<p>设置当前的秒数(0-59)。</p>
+<h5 id="_90">原型<a class="headerlink" href="#_90" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void setSecond(value );
+</code></pre>
+
+<h4 id="setyear">setYear<a class="headerlink" href="#setyear" title="Permanent link">&para;</a></h4>
+<h5 id="_91">简介<a class="headerlink" href="#_91" title="Permanent link">&para;</a></h5>
+<p>设置当前的年份。</p>
+<h5 id="_92">原型<a class="headerlink" href="#_92" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void setYear(number year);
+</code></pre>
+
+<h2 id="flags">类Flags<a class="headerlink" href="#flags" title="Permanent link">&para;</a></h2>
+<p>用于处理按位设置标记的情况，最多0-31位共32个标记。</p>
+<h3 id="_93">函数<a class="headerlink" href="#_93" title="Permanent link">&para;</a></h3>
+<h4 id="contains">contains<a class="headerlink" href="#contains" title="Permanent link">&para;</a></h4>
+<h5 id="_94">简介<a class="headerlink" href="#_94" title="Permanent link">&para;</a></h5>
+<p>判断num里有没有flags里的所有标记</p>
+<h5 id="_95">原型<a class="headerlink" href="#_95" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">bool contains(number num, number flags);
+</code></pre>
+
+<h5 id="_96">示例<a class="headerlink" href="#_96" title="Permanent link">&para;</a></h5>
+<p>以下将演示一个从内容为</p>
+<p>0xF0 的标记中判断是否存在 0xC1 中的所有标记</p>
+<h6 id="_97">示例代码<a class="headerlink" href="#_97" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">Flags.contains(0xF0, 0xC1)
+</code></pre>
+
+<h6 id="_98">运行结果<a class="headerlink" href="#_98" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">false
+</code></pre>
+
+<h4 id="mask">mask<a class="headerlink" href="#mask" title="Permanent link">&para;</a></h4>
+<h5 id="_99">简介<a class="headerlink" href="#_99" title="Permanent link">&para;</a></h5>
+<p>返回num是否包含flags的某一标记。</p>
+<h5 id="_100">原型<a class="headerlink" href="#_100" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">bool mask(number num, number flags);
+</code></pre>
+
+<h5 id="_101">示例<a class="headerlink" href="#_101" title="Permanent link">&para;</a></h5>
+<p>以下将演示一个从内容为</p>
+<p>0xF0 的标记中判断是否存在 0xC1 中的某一标记</p>
+<h6 id="_102">示例代码<a class="headerlink" href="#_102" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">Flags.mask(0xF0, 0xC1)
+</code></pre>
+
+<h6 id="_103">运行结果<a class="headerlink" href="#_103" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">true
+</code></pre>
+
+<h4 id="merge">merge<a class="headerlink" href="#merge" title="Permanent link">&para;</a></h4>
+<h5 id="_104">简介<a class="headerlink" href="#_104" title="Permanent link">&para;</a></h5>
+<p>将num设置完所有参数中的标记后返回。</p>
+<h5 id="_105">原型<a class="headerlink" href="#_105" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number merge(number num[, number flag1, number flag2, ...)
+</code></pre>
+
+<h5 id="_106">示例<a class="headerlink" href="#_106" title="Permanent link">&para;</a></h5>
+<p>以下将演示一个从内容为</p>
+<p>0x02 的标记中合并上 0x01, 0x10</p>
+<h6 id="_107">示例代码<a class="headerlink" href="#_107" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">Flags.merge(0x02, 0x01, 0x10)
+</code></pre>
+
+<h6 id="_108">运行结果<a class="headerlink" href="#_108" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">0x13
+</code></pre>
+
+<h4 id="split">split<a class="headerlink" href="#split" title="Permanent link">&para;</a></h4>
+<h5 id="_109">简介<a class="headerlink" href="#_109" title="Permanent link">&para;</a></h5>
+<p>返回一个数组，包含num里所有存在的标记。</p>
+<h5 id="_110">原型<a class="headerlink" href="#_110" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">array split(number num);
+</code></pre>
+
+<h2 id="math">类Math<a class="headerlink" href="#math" title="Permanent link">&para;</a></h2>
+<h3 id="_111">属性<a class="headerlink" href="#_111" title="Permanent link">&para;</a></h3>
+<h4 id="e">E<a class="headerlink" href="#e" title="Permanent link">&para;</a></h4>
+<h5 id="_112">简介<a class="headerlink" href="#_112" title="Permanent link">&para;</a></h5>
+<p>只读属性。</p>
+<h5 id="_113">权限<a class="headerlink" href="#_113" title="Permanent link">&para;</a></h5>
+<p>只读</p>
+<h4 id="pi">PI<a class="headerlink" href="#pi" title="Permanent link">&para;</a></h4>
+<h5 id="_114">简介<a class="headerlink" href="#_114" title="Permanent link">&para;</a></h5>
+<p>只读属性。</p>
+<h5 id="_115">权限<a class="headerlink" href="#_115" title="Permanent link">&para;</a></h5>
+<p>只读</p>
+<h3 id="_116">函数<a class="headerlink" href="#_116" title="Permanent link">&para;</a></h3>
+<h4 id="acos">acos<a class="headerlink" href="#acos" title="Permanent link">&para;</a></h4>
+<h5 id="_117">简介<a class="headerlink" href="#_117" title="Permanent link">&para;</a></h5>
+<p>返回反余弦值,参数单位为弧度。</p>
+<h5 id="_118">原型<a class="headerlink" href="#_118" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number acos(number x);
+</code></pre>
+
+<h4 id="asin">asin<a class="headerlink" href="#asin" title="Permanent link">&para;</a></h4>
+<h5 id="_119">简介<a class="headerlink" href="#_119" title="Permanent link">&para;</a></h5>
+<p>返回反正弦值,参数单位为弧度。</p>
+<h5 id="_120">原型<a class="headerlink" href="#_120" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number asin(number x);
+</code></pre>
+
+<h4 id="atan">atan<a class="headerlink" href="#atan" title="Permanent link">&para;</a></h4>
+<h5 id="_121">简介<a class="headerlink" href="#_121" title="Permanent link">&para;</a></h5>
+<p>返回反正切值,参数单位为弧度。</p>
+<h5 id="_122">原型<a class="headerlink" href="#_122" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number atan(number x);
+</code></pre>
+
+<h4 id="ceil">ceil<a class="headerlink" href="#ceil" title="Permanent link">&para;</a></h4>
+<h5 id="_123">简介<a class="headerlink" href="#_123" title="Permanent link">&para;</a></h5>
+<p>返回大于或等于x的最小整数。</p>
+<h5 id="_124">原型<a class="headerlink" href="#_124" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">integer ceil(number x);
+</code></pre>
+
+<h4 id="cos">cos<a class="headerlink" href="#cos" title="Permanent link">&para;</a></h4>
+<h5 id="_125">简介<a class="headerlink" href="#_125" title="Permanent link">&para;</a></h5>
+<p>返回余弦值,参数单位为弧度。</p>
+<h5 id="_126">原型<a class="headerlink" href="#_126" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number cos(number x);
+</code></pre>
+
+<h4 id="floor">floor<a class="headerlink" href="#floor" title="Permanent link">&para;</a></h4>
+<h5 id="_127">简介<a class="headerlink" href="#_127" title="Permanent link">&para;</a></h5>
+<p>返回小于或等于x的最大整数。</p>
+<h5 id="_128">原型<a class="headerlink" href="#_128" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">integer floor(number x);
+</code></pre>
+
+<h4 id="lg">lg<a class="headerlink" href="#lg" title="Permanent link">&para;</a></h4>
+<h5 id="_129">简介<a class="headerlink" href="#_129" title="Permanent link">&para;</a></h5>
+<p>返回以10为底的对数。</p>
+<h5 id="_130">原型<a class="headerlink" href="#_130" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number lg(number x);
+</code></pre>
+
+<h4 id="ln">ln<a class="headerlink" href="#ln" title="Permanent link">&para;</a></h4>
+<h5 id="_131">简介<a class="headerlink" href="#_131" title="Permanent link">&para;</a></h5>
+<p>返回自然对数。</p>
+<h5 id="_132">原型<a class="headerlink" href="#_132" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number ln(number x);
+</code></pre>
+
+<h4 id="log_1">log<a class="headerlink" href="#log_1" title="Permanent link">&para;</a></h4>
+<h5 id="_133">简介<a class="headerlink" href="#_133" title="Permanent link">&para;</a></h5>
+<p>返回以base为底的x的对数值。</p>
+<h5 id="_134">原型<a class="headerlink" href="#_134" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number log(number base, number x);
+</code></pre>
+
+<h4 id="pow">pow<a class="headerlink" href="#pow" title="Permanent link">&para;</a></h4>
+<h5 id="_135">简介<a class="headerlink" href="#_135" title="Permanent link">&para;</a></h5>
+<p>指数函数，返回x^y</p>
+<h5 id="_136">原型<a class="headerlink" href="#_136" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number pow(number x, number y);
+</code></pre>
+
+<h4 id="random_1">random<a class="headerlink" href="#random_1" title="Permanent link">&para;</a></h4>
+<h5 id="_137">简介<a class="headerlink" href="#_137" title="Permanent link">&para;</a></h5>
+<p>返回0-1的浮点数。和全局的random相比，这里采用的是随机数性能更好速度更慢些的mt19937算法。</p>
+<h5 id="_138">原型<a class="headerlink" href="#_138" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number random();
+</code></pre>
+
+<h5 id="_139">返回<a class="headerlink" href="#_139" title="Permanent link">&para;</a></h5>
+<p>0-1的浮点数</p>
+<h4 id="round">round<a class="headerlink" href="#round" title="Permanent link">&para;</a></h4>
+<h5 id="_140">简介<a class="headerlink" href="#_140" title="Permanent link">&para;</a></h5>
+<p>返回返回四舍五入后的整数。</p>
+<h5 id="_141">原型<a class="headerlink" href="#_141" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">integer round(number x);
+</code></pre>
+
+<h4 id="sgn">sgn<a class="headerlink" href="#sgn" title="Permanent link">&para;</a></h4>
+<h5 id="_142">简介<a class="headerlink" href="#_142" title="Permanent link">&para;</a></h5>
+<p>符号函数,大于0返回1,等于0(误差10^-8)返回0,小于0返回-1。</p>
+<h5 id="_143">原型<a class="headerlink" href="#_143" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">integer sgn(number x);
+</code></pre>
+
+<h4 id="sin">sin<a class="headerlink" href="#sin" title="Permanent link">&para;</a></h4>
+<h5 id="_144">简介<a class="headerlink" href="#_144" title="Permanent link">&para;</a></h5>
+<p>返回返回正弦值,参数单位为弧度。</p>
+<h5 id="_145">原型<a class="headerlink" href="#_145" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number sin(number x);
+</code></pre>
+
+<h4 id="sqrt">sqrt<a class="headerlink" href="#sqrt" title="Permanent link">&para;</a></h4>
+<h5 id="_146">简介<a class="headerlink" href="#_146" title="Permanent link">&para;</a></h5>
+<p>返回平方根。</p>
+<h5 id="_147">原型<a class="headerlink" href="#_147" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number sqrt(number x);
+</code></pre>
+
+<h4 id="tan">tan<a class="headerlink" href="#tan" title="Permanent link">&para;</a></h4>
+<h5 id="_148">简介<a class="headerlink" href="#_148" title="Permanent link">&para;</a></h5>
+<p>返回正切值,参数单位为弧度。</p>
+<h5 id="_149">原型<a class="headerlink" href="#_149" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">number tan(number x);
+</code></pre>
+
+<h2 id="regex">类Regex<a class="headerlink" href="#regex" title="Permanent link">&para;</a></h2>
+<p>使用Regex(regstr[,ignorecase=false])创建。</p>
+<h3 id="_150">函数<a class="headerlink" href="#_150" title="Permanent link">&para;</a></h3>
+<h4 id="getsubmatch">getSubMatch<a class="headerlink" href="#getsubmatch" title="Permanent link">&para;</a></h4>
+<h5 id="_151">简介<a class="headerlink" href="#_151" title="Permanent link">&para;</a></h5>
+<p>返回子匹配(即正则表达式里用()括住的字符串的匹配)数组，没有子匹配将返回空数组。</p>
+<h5 id="_152">原型<a class="headerlink" href="#_152" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">array getSubMatch(string str);
+</code></pre>
+
+<h5 id="_153">示例<a class="headerlink" href="#_153" title="Permanent link">&para;</a></h5>
+<p>以下将演示一个从内容为</p>
+<p>&ldquo;abcd&rdquo;</p>
+<p>的字符串中匹配到的数组</p>
+<h6 id="_154">示例代码<a class="headerlink" href="#_154" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">Regex(&quot;(.)bc(.)&quot;).getSubMatch(&quot;abcd&quot;)
+</code></pre>
+
+<h6 id="_155">运行结果<a class="headerlink" href="#_155" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">[&quot;abcd&quot;,&quot;a&quot;,&quot;d&quot;]
+</code></pre>
+
+<h4 id="matchall">matchAll<a class="headerlink" href="#matchall" title="Permanent link">&para;</a></h4>
+<h5 id="_156">简介<a class="headerlink" href="#_156" title="Permanent link">&para;</a></h5>
+<p>判断这个正则表达式是否可以全部匹配这个字符串,可以返回true,否则返回false。</p>
+<h5 id="_157">原型<a class="headerlink" href="#_157" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">bool matchAll(string str);
+</code></pre>
+
+<h4 id="replaceall">replaceAll<a class="headerlink" href="#replaceall" title="Permanent link">&para;</a></h4>
+<h5 id="_158">简介<a class="headerlink" href="#_158" title="Permanent link">&para;</a></h5>
+<p>同<a href="#replaceFirst" title="replaceFirst">replaceFirst</a>,只是对所有匹配串都进行替换</p>
+<h5 id="_159">原型<a class="headerlink" href="#_159" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">string replaceAll(string src, string dst);
+</code></pre>
+
+<h5 id="_160">参数<a class="headerlink" href="#_160" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>源字符串</td>
+</tr>
+<tr>
+<td>dst</td>
+<td>目标字符串</td>
+</tr>
+</tbody>
+</table>
+<h4 id="replacefirst">replaceFirst<a class="headerlink" href="#replacefirst" title="Permanent link">&para;</a></h4>
+<h5 id="_161">简介<a class="headerlink" href="#_161" title="Permanent link">&para;</a></h5>
+<p>将src里第一个匹配替换成dst，dst里可以使用\1,\2等表示子匹配，\0表示整个的匹配串。</p>
+<h5 id="_162">原型<a class="headerlink" href="#_162" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">string replaceFirst(string src, string dst);
+</code></pre>
+
+<h5 id="_163">参数<a class="headerlink" href="#_163" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>源字符串</td>
+</tr>
+<tr>
+<td>dst</td>
+<td>目标字符串</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_164">示例<a class="headerlink" href="#_164" title="Permanent link">&para;</a></h5>
+<p>以下将演示一个从内容为</p>
+<p>&ldquo;abcd&rdquo;</p>
+<p>的字符串中匹配到的字符串</p>
+<h6 id="_165">示例代码<a class="headerlink" href="#_165" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">Regex(&quot;(.)bc(.)&quot;).replaceFirst(&quot;abcd&quot;,&quot;\0\1\2&quot;)
+</code></pre>
+
+<h6 id="_166">运行结果<a class="headerlink" href="#_166" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">“abcdad”
+</code></pre>
+
+<h4 id="search">search<a class="headerlink" href="#search" title="Permanent link">&para;</a></h4>
+<h5 id="_167">简介<a class="headerlink" href="#_167" title="Permanent link">&para;</a></h5>
+<p>返回所有匹配到的数组，匹配失败将返回空数组。</p>
+<h5 id="_168">原型<a class="headerlink" href="#_168" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">array search(string str);
+</code></pre>
+
+<h5 id="_169">示例<a class="headerlink" href="#_169" title="Permanent link">&para;</a></h5>
+<p>以下将演示一个从内容为</p>
+<p>&ldquo;a1b2c3&rdquo;</p>
+<p>的字符串中匹配数组的示例</p>
+<h6 id="_170">示例代码<a class="headerlink" href="#_170" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">Regex(&quot;\d&quot;).search(&quot;a1b2c3&quot;)
+</code></pre>
+
+<h6 id="_171">运行结果<a class="headerlink" href="#_171" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">[1,2,3]
+</code></pre>
+
+<h2 id="array">类array<a class="headerlink" href="#array" title="Permanent link">&para;</a></h2>
+<p>系统内置类，提供了对应类型的属性和方法。</p>
+<h3 id="_172">属性<a class="headerlink" href="#_172" title="Permanent link">&para;</a></h3>
+<h4 id="length">length<a class="headerlink" href="#length" title="Permanent link">&para;</a></h4>
+<h5 id="_173">简介<a class="headerlink" href="#_173" title="Permanent link">&para;</a></h5>
+<p>返回数组的长度。</p>
+<h5 id="_174">返回<a class="headerlink" href="#_174" title="Permanent link">&para;</a></h5>
+<p>integer </p>
+<h5 id="_175">权限<a class="headerlink" href="#_175" title="Permanent link">&para;</a></h5>
+<p>只读</p>
+<h4 id="size">size<a class="headerlink" href="#size" title="Permanent link">&para;</a></h4>
+<h5 id="_176">简介<a class="headerlink" href="#_176" title="Permanent link">&para;</a></h5>
+<p>同length，返回数组的长度。</p>
+<h5 id="_177">返回<a class="headerlink" href="#_177" title="Permanent link">&para;</a></h5>
+<p>integer </p>
+<h5 id="_178">权限<a class="headerlink" href="#_178" title="Permanent link">&para;</a></h5>
+<p>只读</p>
+<h3 id="_179">函数<a class="headerlink" href="#_179" title="Permanent link">&para;</a></h3>
+<h4 id="add">add<a class="headerlink" href="#add" title="Permanent link">&para;</a></h4>
+<h5 id="_180">简介<a class="headerlink" href="#_180" title="Permanent link">&para;</a></h5>
+<p>向数组尾部添加参数。</p>
+<h5 id="_181">原型<a class="headerlink" href="#_181" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void add([anytype arg1, anytype arg2, ...)
+</code></pre>
+
+<h4 id="clear">clear<a class="headerlink" href="#clear" title="Permanent link">&para;</a></h4>
+<h5 id="_182">简介<a class="headerlink" href="#_182" title="Permanent link">&para;</a></h5>
+<p>清空本字典。</p>
+<h5 id="_183">原型<a class="headerlink" href="#_183" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void clear();
+</code></pre>
+
+<h4 id="clone">clone<a class="headerlink" href="#clone" title="Permanent link">&para;</a></h4>
+<h5 id="_184">简介<a class="headerlink" href="#_184" title="Permanent link">&para;</a></h5>
+<p>复制出一份一样的新数组，更改新数组不会影响原数组。</p>
+<h5 id="_185">原型<a class="headerlink" href="#_185" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">array clone();
+</code></pre>
+
+<h4 id="concat">concat<a class="headerlink" href="#concat" title="Permanent link">&para;</a></h4>
+<h5 id="_186">简介<a class="headerlink" href="#_186" title="Permanent link">&para;</a></h5>
+<p>会将此数组与参数中所有数组的元素连接起来形成的大数组，原数组不受影响。</p>
+<h5 id="_187">原型<a class="headerlink" href="#_187" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">string concat([array arr1, array arr2, ...)
+</code></pre>
+
+<h5 id="_188">示例<a class="headerlink" href="#_188" title="Permanent link">&para;</a></h5>
+<p>以下将演示[1,2,3]和[3,2,1]连接的结果</p>
+<h6 id="_189">示例代码<a class="headerlink" href="#_189" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">[1,2,3].concat([3,2,1])
+</code></pre>
+
+<h6 id="_190">运行结果<a class="headerlink" href="#_190" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">[1,2,3,3,2,1]
+</code></pre>
+
+<h4 id="equals">equals<a class="headerlink" href="#equals" title="Permanent link">&para;</a></h4>
+<h5 id="_191">简介<a class="headerlink" href="#_191" title="Permanent link">&para;</a></h5>
+<p>比较本对象与value值是否相等。如果value是数组，会比较每个元素是否相等，长度较短的数组会补上void去做比较</p>
+<h5 id="_192">原型<a class="headerlink" href="#_192" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">bool equals(anytype value);
+</code></pre>
+
+<h5 id="_193">示例<a class="headerlink" href="#_193" title="Permanent link">&para;</a></h5>
+<p>以下将演示[1,2,3]和[1,2,3,0]的比较</p>
+<h6 id="_194">示例代码<a class="headerlink" href="#_194" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">[1,2,3].equals([1,2,3,0])
+</code></pre>
+
+<h6 id="_195">运行结果<a class="headerlink" href="#_195" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">true
+</code></pre>
+
+<h4 id="erase">erase<a class="headerlink" href="#erase" title="Permanent link">&para;</a></h4>
+<h5 id="_196">简介<a class="headerlink" href="#_196" title="Permanent link">&para;</a></h5>
+<p>从数组中删除参数对应下标的元素，负数表示从后往前数，注意是从前往后逐个删除的，所以erase(1,1)会删除原数组下标为1,2位置的元素。越界会抛出异常。</p>
+<h5 id="_197">原型<a class="headerlink" href="#_197" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void erase([integer index1, integer index2, ...)
+</code></pre>
+
+<h4 id="find">find<a class="headerlink" href="#find" title="Permanent link">&para;</a></h4>
+<h5 id="_198">简介<a class="headerlink" href="#_198" title="Permanent link">&para;</a></h5>
+<p>返回数组中第一个等于value的元素的位置，使用==比较，找不到返回-1。</p>
+<h5 id="_199">原型<a class="headerlink" href="#_199" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">integer find(anytype value);
+</code></pre>
+
+<h4 id="insert">insert<a class="headerlink" href="#insert" title="Permanent link">&para;</a></h4>
+<h5 id="_200">简介<a class="headerlink" href="#_200" title="Permanent link">&para;</a></h5>
+<p>在数组index位置插入一个新的value。</p>
+<h5 id="_201">原型<a class="headerlink" href="#_201" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void insert(integer index, anytype value
+</code></pre>
+
+<h5 id="_202">示例<a class="headerlink" href="#_202" title="Permanent link">&para;</a></h5>
+<p>以下将演示在[1,2,3]的2位置插入4的结果</p>
+<h6 id="_203">示例代码<a class="headerlink" href="#_203" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">var a=[1,2,3];
+
+a.insert(2,4);
+
+log(a);
+</code></pre>
+
+<h6 id="_204">运行结果<a class="headerlink" href="#_204" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">[1,2,4,3]
+</code></pre>
+
+<h4 id="join">join<a class="headerlink" href="#join" title="Permanent link">&para;</a></h4>
+<h5 id="_205">简介<a class="headerlink" href="#_205" title="Permanent link">&para;</a></h5>
+<p>将数组中所有元素转成字符串，然后用str连接。</p>
+<h5 id="_206">原型<a class="headerlink" href="#_206" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">string join(string str);
+</code></pre>
+
+<h5 id="_207">参数<a class="headerlink" href="#_207" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str</td>
+<td>分隔符</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_208">示例<a class="headerlink" href="#_208" title="Permanent link">&para;</a></h5>
+<p>以下将演示用&rdquo;-&ldquo;连接[1,2,3]的结果</p>
+<h6 id="_209">示例代码<a class="headerlink" href="#_209" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">[1,2,3].join(&quot;-&quot;)
+</code></pre>
+
+<h6 id="_210">运行结果<a class="headerlink" href="#_210" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">&quot;1-2-3&quot;
+</code></pre>
+
+<h4 id="load">load<a class="headerlink" href="#load" title="Permanent link">&para;</a></h4>
+<h5 id="_211">简介<a class="headerlink" href="#_211" title="Permanent link">&para;</a></h5>
+<p>读取文件并按照换行切分为数组。</p>
+<h5 id="_212">原型<a class="headerlink" href="#_212" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">array load(string filename);
+</code></pre>
+
+<h5 id="_213">参数<a class="headerlink" href="#_213" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>文件名</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_214">示例<a class="headerlink" href="#_214" title="Permanent link">&para;</a></h5>
+<p>以下将演示一个从内容为</p>
+<p>box}a</p>
+<p>box}b</p>
+<p>box}c</p>
+<p>的1.txt文件载入为数组的示例：</p>
+<h6 id="_215">示例代码<a class="headerlink" href="#_215" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">[].load(&quot;1.txt&quot;)
+</code></pre>
+
+<h6 id="_216">运行结果<a class="headerlink" href="#_216" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]
+</code></pre>
+
+<h4 id="random_2">random<a class="headerlink" href="#random_2" title="Permanent link">&para;</a></h4>
+<h5 id="_217">简介<a class="headerlink" href="#_217" title="Permanent link">&para;</a></h5>
+<p>随机返回数组中一个元素。</p>
+<h5 id="_218">原型<a class="headerlink" href="#_218" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">anytype random();
+</code></pre>
+
+<h4 id="remove">remove<a class="headerlink" href="#remove" title="Permanent link">&para;</a></h4>
+<h5 id="_219">简介<a class="headerlink" href="#_219" title="Permanent link">&para;</a></h5>
+<p>从数组中删除与参数相同的元素，使用==比较。</p>
+<h5 id="_220">原型<a class="headerlink" href="#_220" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void remove([anytype arg1, anytype arg2, ...)
+</code></pre>
+
+<h4 id="save">save<a class="headerlink" href="#save" title="Permanent link">&para;</a></h4>
+<h5 id="_221">简介<a class="headerlink" href="#_221" title="Permanent link">&para;</a></h5>
+<p>将字符串数组按照换行合并，并保存到文件</p>
+<h5 id="_222">原型<a class="headerlink" href="#_222" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void save(string filename, bool append);
+</code></pre>
+
+<h5 id="_223">参数<a class="headerlink" href="#_223" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>文件名</td>
+</tr>
+<tr>
+<td>append</td>
+<td>是否追加在文件末尾。若为否，则覆盖整个文件。</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_224">示例<a class="headerlink" href="#_224" title="Permanent link">&para;</a></h5>
+<p>以下将演示一个从内容为[&ldquo;a&rdquo;,&rdquo;b&rdquo;,&rdquo;c&rdquo;]的数组写入文件的示例：</p>
+<h6 id="_225">示例代码<a class="headerlink" href="#_225" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">[].save(&quot;1.txt&quot;)
+</code></pre>
+
+<h4 id="savestruct">saveStruct<a class="headerlink" href="#savestruct" title="Permanent link">&para;</a></h4>
+<h5 id="_226">简介<a class="headerlink" href="#_226" title="Permanent link">&para;</a></h5>
+<p>将数组进行序列化，并保存到文件。</p>
+<h5 id="_227">原型<a class="headerlink" href="#_227" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void saveStruct(string filename, string mode);
+</code></pre>
+
+<h5 id="_228">参数<a class="headerlink" href="#_228" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>文件名</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>模式。若首字母为&rsquo;o&rsquo;则字符串的其余部分代表一个偏移，文件将从该偏移处进行覆盖保存，负值将从文件末尾进行计算。若首字母为&rsquo;z&rsquo;则与&rsquo;o&rsquo;类似，只不过将启用压缩。</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_229">说明<a class="headerlink" href="#_229" title="Permanent link">&para;</a></h5>
+<p>文件的内容可以直接使用<a href="#evalFile" title="evalFile">evalFile</a>进行反序列化，读取至变量。</p>
+<h5 id="_230">示例<a class="headerlink" href="#_230" title="Permanent link">&para;</a></h5>
+<p>以下将演示一个从内容为[1,2,3]的数组写入文件的示例：</p>
+<h6 id="_231">示例代码<a class="headerlink" href="#_231" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">[1,2,3].saveStruct(&quot;1.txt&quot;)
+</code></pre>
+
+<h4 id="sort">sort<a class="headerlink" href="#sort" title="Permanent link">&para;</a></h4>
+<h5 id="_232">简介<a class="headerlink" href="#_232" title="Permanent link">&para;</a></h5>
+<p>根据指定的函数或模式排序。会改动原字符串，没有返回值。</p>
+<h5 id="_233">原型<a class="headerlink" href="#_233" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void sort(function func
+
+string modestr=&quot;+&quot;
+</code></pre>
+
+<h5 id="_234">参数<a class="headerlink" href="#_234" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>func</td>
+<td>排序函数</td>
+</tr>
+<tr>
+<td>modestr</td>
+<td>排序模式字符串</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_235">说明<a class="headerlink" href="#_235" title="Permanent link">&para;</a></h5>
+<p>如果指定的是函数，将把此函数（func(a,b)）当做&lt;的比较函数，从小到大排序。</p>
+<p>如果指定的是模式字符串，则：</p>
+<p>&rdquo;+&rdquo;：以默认的比较运算符从小到大排序</p>
+<p>&rdquo;-&ldquo;：以默认的比较运算符从大到小排序</p>
+<p>&ldquo;0&rdquo;：按数值从小到大排序</p>
+<p>&ldquo;9&rdquo;：按数值从大到小排序</p>
+<p>&ldquo;a&rdquo;：按字符串从小到大排序</p>
+<p>&ldquo;z&rdquo;：按字符串从大到小排序</p>
+<h5 id="_236">示例<a class="headerlink" href="#_236" title="Permanent link">&para;</a></h5>
+<p>以下将演示[1,2,3]按&rdquo;-&ldquo;排序的结果</p>
+<h6 id="_237">示例代码<a class="headerlink" href="#_237" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">var a=[1,2,3];
+
+a.sort(&quot;9&quot;);
+
+log(a);
+</code></pre>
+
+<h6 id="_238">运行结果<a class="headerlink" href="#_238" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">[3,2,1]
+</code></pre>
+
+<h2 id="dictionary">类dictionary<a class="headerlink" href="#dictionary" title="Permanent link">&para;</a></h2>
+<p>系统内置类，提供了对应类型的属性和方法。</p>
+<h3 id="_239">函数<a class="headerlink" href="#_239" title="Permanent link">&para;</a></h3>
+<h4 id="clone_1">clone<a class="headerlink" href="#clone_1" title="Permanent link">&para;</a></h4>
+<h5 id="_240">简介<a class="headerlink" href="#_240" title="Permanent link">&para;</a></h5>
+<p>复制出一份一样的新字典，更改新字典不会影响原字典。</p>
+<h5 id="_241">原型<a class="headerlink" href="#_241" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">dictionary clone();
+</code></pre>
+
+<h4 id="equals_1">equals<a class="headerlink" href="#equals_1" title="Permanent link">&para;</a></h4>
+<h5 id="_242">简介<a class="headerlink" href="#_242" title="Permanent link">&para;</a></h5>
+<p>比较本对象与value值是否相等。如果value是字典，会比较每对键-值是否相等，不存在的键会认为值是void去做比较。</p>
+<h5 id="_243">原型<a class="headerlink" href="#_243" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">bool equals(anytype value);
+</code></pre>
+
+<h5 id="_244">示例<a class="headerlink" href="#_244" title="Permanent link">&para;</a></h5>
+<p>以下将演示%[key1:1,key2:2]和%[key1:1,key2:2,key3:3]的比较</p>
+<h6 id="_245">示例代码<a class="headerlink" href="#_245" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">%[key1:1,key2:2].equals(%[key1:1,key2:2,key3:3])
+</code></pre>
+
+<h6 id="_246">运行结果<a class="headerlink" href="#_246" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">false
+</code></pre>
+
+<h4 id="erase_1">erase<a class="headerlink" href="#erase_1" title="Permanent link">&para;</a></h4>
+<h5 id="_247">简介<a class="headerlink" href="#_247" title="Permanent link">&para;</a></h5>
+<p>从字典中删除键与参数相同的元素，使用==比较。</p>
+<h5 id="_248">原型<a class="headerlink" href="#_248" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void erase([anytype arg1, anytype arg2, ...)
+</code></pre>
+
+<h4 id="except">except<a class="headerlink" href="#except" title="Permanent link">&para;</a></h4>
+<h5 id="_249">简介<a class="headerlink" href="#_249" title="Permanent link">&para;</a></h5>
+<p>从本字典中去除参数字典中包含的有效键（即值不为void）。</p>
+<h5 id="_250">原型<a class="headerlink" href="#_250" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void except(dictionary dic);
+</code></pre>
+
+<h4 id="find_1">find<a class="headerlink" href="#find_1" title="Permanent link">&para;</a></h4>
+<h5 id="_251">简介<a class="headerlink" href="#_251" title="Permanent link">&para;</a></h5>
+<p>返回字典中是否存在键名为key的键，值为空（void）的键将被视为无效键。</p>
+<h5 id="_252">原型<a class="headerlink" href="#_252" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">bool find(string key);
+</code></pre>
+
+<h4 id="getkeyarray">getKeyArray<a class="headerlink" href="#getkeyarray" title="Permanent link">&para;</a></h4>
+<h5 id="_253">简介<a class="headerlink" href="#_253" title="Permanent link">&para;</a></h5>
+<p>返回所有有效键组成的数组。</p>
+<h5 id="_254">原型<a class="headerlink" href="#_254" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">array getKeyArray();
+</code></pre>
+
+<h4 id="getvaluearray">getValueArray<a class="headerlink" href="#getvaluearray" title="Permanent link">&para;</a></h4>
+<h5 id="_255">简介<a class="headerlink" href="#_255" title="Permanent link">&para;</a></h5>
+<p>返回所有有效键的值组成的数组。</p>
+<h5 id="_256">原型<a class="headerlink" href="#_256" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">array getValueArray();
+</code></pre>
+
+<h4 id="remove_1">remove<a class="headerlink" href="#remove_1" title="Permanent link">&para;</a></h4>
+<h5 id="_257">简介<a class="headerlink" href="#_257" title="Permanent link">&para;</a></h5>
+<p>从字典中删除值与参数相同的元素，使用==比较。</p>
+<h5 id="_258">原型<a class="headerlink" href="#_258" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void remove([anytype arg1, anytype arg2, ...)
+</code></pre>
+
+<h4 id="savestruct_1">saveStruct<a class="headerlink" href="#savestruct_1" title="Permanent link">&para;</a></h4>
+<h5 id="_259">简介<a class="headerlink" href="#_259" title="Permanent link">&para;</a></h5>
+<p>将数组进行序列化，并保存到文件。</p>
+<h5 id="_260">原型<a class="headerlink" href="#_260" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void saveStruct(string filename, string mode);
+</code></pre>
+
+<h5 id="_261">参数<a class="headerlink" href="#_261" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>文件名</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>模式。若首字母为&rsquo;o&rsquo;则字符串的其余部分代表一个偏移，文件将从该偏移处进行覆盖保存，负值将从文件末尾进行计算。若首字母为&rsquo;z&rsquo;则与&rsquo;o&rsquo;类似，只不过将启用压缩。</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_262">说明<a class="headerlink" href="#_262" title="Permanent link">&para;</a></h5>
+<p>文件的内容可以直接使用<a href="#evalFile" title="evalFile">evalFile</a>进行反序列化，读取至变量。</p>
+<h5 id="_263">示例<a class="headerlink" href="#_263" title="Permanent link">&para;</a></h5>
+<p>以下将演示一个从内容为%[key:1]的字典写入文件的示例：</p>
+<h6 id="_264">示例代码<a class="headerlink" href="#_264" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">%[key:1].saveStruct(&quot;1.txt&quot;)
+</code></pre>
+
+<h4 id="sortkeybyvalue">sortKeyByValue<a class="headerlink" href="#sortkeybyvalue" title="Permanent link">&para;</a></h4>
+<h5 id="_265">简介<a class="headerlink" href="#_265" title="Permanent link">&para;</a></h5>
+<p>按值排序所有的有效键，比较的方式根据指定的函数或模式决定。</p>
+<h5 id="_266">原型<a class="headerlink" href="#_266" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">array sortKeyByValue(function func
+
+string modestr=&quot;+&quot;
+</code></pre>
+
+<h5 id="_267">参数<a class="headerlink" href="#_267" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>func</td>
+<td>排序函数</td>
+</tr>
+<tr>
+<td>modestr</td>
+<td>排序模式字符串</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_268">说明<a class="headerlink" href="#_268" title="Permanent link">&para;</a></h5>
+<p>如果指定的是函数，将把此函数（func(a,b)）当做&lt;的比较函数，从小到大排序。</p>
+<p>如果指定的是模式字符串，则：</p>
+<p>&rdquo;+&rdquo;：以默认的比较运算符从小到大排序</p>
+<p>&rdquo;-&ldquo;：以默认的比较运算符从大到小排序</p>
+<p>&ldquo;0&rdquo;：按数值从小到大排序</p>
+<p>&ldquo;9&rdquo;：按数值从大到小排序</p>
+<p>&ldquo;a&rdquo;：按字符串从小到大排序</p>
+<p>&ldquo;z&rdquo;：按字符串从大到小排序</p>
+<h5 id="_269">示例<a class="headerlink" href="#_269" title="Permanent link">&para;</a></h5>
+<p>以下将演示%[key1:1,key2:2,key3:3]按&rdquo;-&ldquo;排序的结果</p>
+<h6 id="_270">示例代码<a class="headerlink" href="#_270" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">%[key1:1,key2:2,key3:3].sort(&quot;9&quot;);
+</code></pre>
+
+<h6 id="_271">运行结果<a class="headerlink" href="#_271" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">[&quot;key3&quot;, &quot;key2&quot;, &quot;key1&quot;]
+</code></pre>
+
+<h4 id="toarray">toArray<a class="headerlink" href="#toarray" title="Permanent link">&para;</a></h4>
+<h5 id="_272">简介<a class="headerlink" href="#_272" title="Permanent link">&para;</a></h5>
+<p>返回[键1, 值1, 键2, 值2, &hellip;]的数组，值为void的键将被无视。</p>
+<h5 id="_273">原型<a class="headerlink" href="#_273" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">array toArray();
+</code></pre>
+
+<h4 id="update">update<a class="headerlink" href="#update" title="Permanent link">&para;</a></h4>
+<h5 id="_274">简介<a class="headerlink" href="#_274" title="Permanent link">&para;</a></h5>
+<p>与新字典合并，重复的键将被覆盖。</p>
+<h5 id="_275">原型<a class="headerlink" href="#_275" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">void update(dictionary dic);
+</code></pre>
+
+<h2 id="string">类string<a class="headerlink" href="#string" title="Permanent link">&para;</a></h2>
+<p>系统内置类，提供了对应类型的属性和方法。</p>
+<h3 id="_276">属性<a class="headerlink" href="#_276" title="Permanent link">&para;</a></h3>
+<h4 id="length_1">length<a class="headerlink" href="#length_1" title="Permanent link">&para;</a></h4>
+<h5 id="_277">简介<a class="headerlink" href="#_277" title="Permanent link">&para;</a></h5>
+<p>返回字符串的长度。</p>
+<h5 id="_278">返回<a class="headerlink" href="#_278" title="Permanent link">&para;</a></h5>
+<p>integer </p>
+<h5 id="_279">权限<a class="headerlink" href="#_279" title="Permanent link">&para;</a></h5>
+<p>只读</p>
+<h4 id="size_1">size<a class="headerlink" href="#size_1" title="Permanent link">&para;</a></h4>
+<h5 id="_280">简介<a class="headerlink" href="#_280" title="Permanent link">&para;</a></h5>
+<p>同<a href="#length" title="length">length</a>，返回字符串的长度。</p>
+<h5 id="_281">返回<a class="headerlink" href="#_281" title="Permanent link">&para;</a></h5>
+<p>integer </p>
+<h5 id="_282">权限<a class="headerlink" href="#_282" title="Permanent link">&para;</a></h5>
+<p>只读</p>
+<h3 id="_283">函数<a class="headerlink" href="#_283" title="Permanent link">&para;</a></h3>
+<h4 id="beginwith">beginWith<a class="headerlink" href="#beginwith" title="Permanent link">&para;</a></h4>
+<h5 id="_284">简介<a class="headerlink" href="#_284" title="Permanent link">&para;</a></h5>
+<p>参数为字符串或正则表达式类。返回原字符串是否已参数给定的字符串开头。</p>
+<h5 id="_285">原型<a class="headerlink" href="#_285" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">bool beginWith(string str
+
+Regex regexp
+</code></pre>
+
+<h4 id="endwith">endWith<a class="headerlink" href="#endwith" title="Permanent link">&para;</a></h4>
+<h5 id="_286">简介<a class="headerlink" href="#_286" title="Permanent link">&para;</a></h5>
+<p>参数为字符串或正则表达式类。返回原字符串是否已参数给定的字符串结尾。</p>
+<h5 id="_287">原型<a class="headerlink" href="#_287" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">bool endWith(string str
+
+Regex regexp
+</code></pre>
+
+<h4 id="equals_2">equals<a class="headerlink" href="#equals_2" title="Permanent link">&para;</a></h4>
+<h5 id="_288">简介<a class="headerlink" href="#_288" title="Permanent link">&para;</a></h5>
+<p>比较本对象与value值是否相等。</p>
+<h5 id="_289">原型<a class="headerlink" href="#_289" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">bool equals(anytype value);
+</code></pre>
+
+<h4 id="indexof">indexOf<a class="headerlink" href="#indexof" title="Permanent link">&para;</a></h4>
+<h5 id="_290">简介<a class="headerlink" href="#_290" title="Permanent link">&para;</a></h5>
+<p>第一个参数为字符串或正则表达式类。从startpos位置开始，寻找第一次出现参数1的位置。</p>
+<h5 id="_291">原型<a class="headerlink" href="#_291" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">integer indexOf(string str[, startpos = 0)
+
+Regex regexp[, startpos = 0)
+</code></pre>
+
+<h5 id="_292">示例<a class="headerlink" href="#_292" title="Permanent link">&para;</a></h5>
+<p>以下将演示在&rdquo;1,2,,3&rdquo;的查找&rdquo;,&rdquo;的结果</p>
+<h6 id="_293">示例代码<a class="headerlink" href="#_293" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">&quot;1,2,,3&quot;.indexOf(&quot;,&quot;)
+</code></pre>
+
+<h6 id="_294">运行结果<a class="headerlink" href="#_294" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">1
+</code></pre>
+
+<h6 id="_295">示例代码<a class="headerlink" href="#_295" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">&quot;1,2,,3&quot;.indexOf(&quot;,&quot;, 2)
+</code></pre>
+
+<h6 id="_296">运行结果<a class="headerlink" href="#_296" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">3
+</code></pre>
+
+<h4 id="lastindexof">lastIndexOf<a class="headerlink" href="#lastindexof" title="Permanent link">&para;</a></h4>
+<h5 id="_297">简介<a class="headerlink" href="#_297" title="Permanent link">&para;</a></h5>
+<p>第一个参数为字符串或正则表达式类。从endpos位置开始，向前寻找第一次出现参数1的位置。</p>
+<h5 id="_298">原型<a class="headerlink" href="#_298" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">integer lastIndexOf(string str[, endpos = 0)
+
+Regex regexp[, endpos = 0)
+</code></pre>
+
+<h5 id="_299">示例<a class="headerlink" href="#_299" title="Permanent link">&para;</a></h5>
+<p>以下将演示在&rdquo;1,2,,3&rdquo;的查找&rdquo;,&rdquo;的结果</p>
+<h6 id="_300">示例代码<a class="headerlink" href="#_300" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">&quot;1,2,,3&quot;.lastIndexOf(&quot;,&quot;)
+</code></pre>
+
+<h6 id="_301">运行结果<a class="headerlink" href="#_301" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">4
+</code></pre>
+
+<h6 id="_302">示例代码<a class="headerlink" href="#_302" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">&quot;1,2,,3&quot;.lastIndexOf(&quot;,&quot;, 2)
+</code></pre>
+
+<h6 id="_303">运行结果<a class="headerlink" href="#_303" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">1
+</code></pre>
+
+<h4 id="replace">replace<a class="headerlink" href="#replace" title="Permanent link">&para;</a></h4>
+<h5 id="_304">简介<a class="headerlink" href="#_304" title="Permanent link">&para;</a></h5>
+<p>参数为字符串或正则表达式类。将原字符串中str1全部替换为str2。</p>
+<h5 id="_305">原型<a class="headerlink" href="#_305" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">string replace(string str, string str2
+
+Regex regexp, string str2
+</code></pre>
+
+<h5 id="_306">示例<a class="headerlink" href="#_306" title="Permanent link">&para;</a></h5>
+<p>以下将演示将&rdquo;aaa&rdquo;中&rdquo;a&rdquo;替换为&rdquo;ab&rdquo;的结果</p>
+<h6 id="_307">示例代码<a class="headerlink" href="#_307" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">&quot;aaa&quot;.replace(&quot;a&quot;, &quot;ab&quot;)
+</code></pre>
+
+<h6 id="_308">运行结果<a class="headerlink" href="#_308" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">&quot;ababab&quot;
+</code></pre>
+
+<h4 id="split_1">split<a class="headerlink" href="#split_1" title="Permanent link">&para;</a></h4>
+<h5 id="_309">简介<a class="headerlink" href="#_309" title="Permanent link">&para;</a></h5>
+<p>第一个参数为字符串或正则表达式类。用第一个参数分割原字符串得到一串数组，ignorenull表示是否忽略结果数组中的空串，如果为真，结果数组中的空串将被抹去</p>
+<h5 id="_310">原型<a class="headerlink" href="#_310" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">array split(string str[, ignorenull = false)
+
+Regex regexp[, ignorenull = false)
+</code></pre>
+
+<h5 id="_311">示例<a class="headerlink" href="#_311" title="Permanent link">&para;</a></h5>
+<p>以下将演示用&rdquo;,&rdquo;来分割&rdquo;1,2,,3&rdquo;的结果</p>
+<h6 id="_312">示例代码<a class="headerlink" href="#_312" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">&quot;1,2,,3&quot;.split(&quot;,&quot;)
+</code></pre>
+
+<h6 id="_313">运行结果<a class="headerlink" href="#_313" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">[&quot;1&quot;, &quot;2&quot;, &quot;&quot;, &quot;3&quot;]
+</code></pre>
+
+<h6 id="_314">示例代码<a class="headerlink" href="#_314" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">&quot;1,2,,3&quot;.split(&quot;,&quot;, true)
+</code></pre>
+
+<h6 id="_315">运行结果<a class="headerlink" href="#_315" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]
+</code></pre>
+
+<h4 id="sprintf">sprintf<a class="headerlink" href="#sprintf" title="Permanent link">&para;</a></h4>
+<h5 id="_316">简介<a class="headerlink" href="#_316" title="Permanent link">&para;</a></h5>
+<p>格式化字符串，以本字符串为格式，根据传入的参数生成一个新的字符串。</p>
+<h5 id="_317">原型<a class="headerlink" href="#_317" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">string sprintf([anytype arg1, anytype arg2, ...)
+</code></pre>
+
+<h5 id="_318">示例<a class="headerlink" href="#_318" title="Permanent link">&para;</a></h5>
+<p>以下将演示用&rdquo;%04d&rdquo;来格式化233的结果</p>
+<h6 id="_319">示例代码<a class="headerlink" href="#_319" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">&quot;%04d&quot;.sprintf(233)
+</code></pre>
+
+<h6 id="_320">运行结果<a class="headerlink" href="#_320" title="Permanent link">&para;</a></h6>
+<pre><code class="c++">&quot;0233&quot;
+</code></pre>
+
+<h4 id="substr">substr<a class="headerlink" href="#substr" title="Permanent link">&para;</a></h4>
+<h5 id="_321">简介<a class="headerlink" href="#_321" title="Permanent link">&para;</a></h5>
+<p>同<a href="#substring" title="substring">substring</a>，取从start开始长度为len的子串，如果省略len，则取到原字符串末尾。如果start位置不合法，则返回空串。</p>
+<h5 id="_322">原型<a class="headerlink" href="#_322" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">string substr(integer start
+
+integer start, integer len
+</code></pre>
+
+<h4 id="substring">substring<a class="headerlink" href="#substring" title="Permanent link">&para;</a></h4>
+<h5 id="_323">简介<a class="headerlink" href="#_323" title="Permanent link">&para;</a></h5>
+<p>取子串</p>
+<h5 id="_324">原型<a class="headerlink" href="#_324" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">string substring(integer start
+
+integer start, integer len
+</code></pre>
+
+<h5 id="_325">说明<a class="headerlink" href="#_325" title="Permanent link">&para;</a></h5>
+<p>取从start开始长度为len的子串，如果省略len，则取到原字符串末尾。如果start位置不合法，则返回空串。</p>
+<h4 id="tolowercase">toLowerCase<a class="headerlink" href="#tolowercase" title="Permanent link">&para;</a></h4>
+<h5 id="_326">简介<a class="headerlink" href="#_326" title="Permanent link">&para;</a></h5>
+<p>返回新字符串，原字符串中所有大写字母被转化为小写。</p>
+<h5 id="_327">原型<a class="headerlink" href="#_327" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">string toLowerCase();
+</code></pre>
+
+<h4 id="touppercase">toUpperCase<a class="headerlink" href="#touppercase" title="Permanent link">&para;</a></h4>
+<h5 id="_328">简介<a class="headerlink" href="#_328" title="Permanent link">&para;</a></h5>
+<p>返回新字符串，原字符串中所有小写字母被转化为大写。</p>
+<h5 id="_329">原型<a class="headerlink" href="#_329" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">string toUpperCase();
+</code></pre>
+
+<h2 id="undefined">类undefined<a class="headerlink" href="#undefined" title="Permanent link">&para;</a></h2>
+<p>系统内置类，提供了对应类型的属性和方法。</p>
+<h3 id="_330">函数<a class="headerlink" href="#_330" title="Permanent link">&para;</a></h3>
+<h4 id="equals_3">equals<a class="headerlink" href="#equals_3" title="Permanent link">&para;</a></h4>
+<h5 id="_331">简介<a class="headerlink" href="#_331" title="Permanent link">&para;</a></h5>
+<p>比较本对象与value值是否相等。</p>
+<h5 id="_332">原型<a class="headerlink" href="#_332" title="Permanent link">&para;</a></h5>
+<pre><code class="c++">bool equals(anytype value);
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="engine/" class="btn btn-neutral float-right" title="特有函数"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../new/quickstart/" class="btn btn-neutral" title="快速入门"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />本文档采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../new/quickstart/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="engine/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

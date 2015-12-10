@@ -1,0 +1,27 @@
+site_name: BKEngine Documentary
+theme: readthedocs
+site_description: BKEngine 文档中心，游戏引擎文档，Galgamme/AVG制作教程
+site_author: 面包工坊
+copyright: <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />本文档采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+extra_css: [themefix.css]
+markdown_extensions:
+    - toc:
+        permalink: True
+    - admonition
+    - sane_lists
+    - smarty
+    - extra
+pages:
+    - 首页: index.md
+    - 常见问题（必看！）: faq.md
+    - 旧教程:
+        - 快速入门: old/quickstart.md
+        - 图像: old/image.md
+        - 声音: old/sound.md
+        - 语法进阶: old/grammar.md
+        - 动画: old/animation.md
+    - 新教程（施工中）:
+        - "快速入门": "new/quickstart.md"
+    - Parser 系统: 
+        - 基本语法: parser/index.md
+        - 特有函数: parser/engine.md

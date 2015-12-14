@@ -11,6 +11,7 @@ markdown_extensions:
     - sane_lists
     - smarty
     - extra
+    - tables
 pages:
     - 首页: index.md
     - 常见问题（必看！）: faq.md
@@ -21,7 +22,10 @@ pages:
         - 语法进阶: old/grammar.md
         - 动画: old/animation.md
     - 新教程（施工中）:
-        - "快速入门": "new/quickstart.md"
+        - 快速入门: new/quickstart.md
+    - 脚本命令手册:
+        - 精灵类: bkscr/sprite.md
+        - 音频类: bkscr/sound.md
     - Parser 系统: 
         - 基本语法: parser/index.md
         - 特有函数: parser/engine.md

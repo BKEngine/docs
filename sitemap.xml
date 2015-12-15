@@ -3,16 +3,16 @@
 
     
     <url>
-     <loc>None/</loc>
-     <lastmod>2015-12-14</lastmod>
+     <loc>http://bke.bakery.moe/</loc>
+     <lastmod>2015-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/faq/</loc>
-     <lastmod>2015-12-14</lastmod>
+     <loc>http://bke.bakery.moe/faq/</loc>
+     <lastmod>2015-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,42 +20,32 @@
     
         
     <url>
-     <loc>None/old/quickstart/</loc>
-     <lastmod>2015-12-14</lastmod>
+     <loc>http://bke.bakery.moe/old/quickstart/</loc>
+     <lastmod>2015-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/old/image/</loc>
-     <lastmod>2015-12-14</lastmod>
+     <loc>http://bke.bakery.moe/old/image/</loc>
+     <lastmod>2015-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/old/sound/</loc>
-     <lastmod>2015-12-14</lastmod>
+     <loc>http://bke.bakery.moe/old/sound/</loc>
+     <lastmod>2015-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/old/grammar/</loc>
-     <lastmod>2015-12-14</lastmod>
+     <loc>http://bke.bakery.moe/old/grammar/</loc>
+     <lastmod>2015-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/old/animation/</loc>
-     <lastmod>2015-12-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>None/new/quickstart/</loc>
-     <lastmod>2015-12-14</lastmod>
+     <loc>http://bke.bakery.moe/old/animation/</loc>
+     <lastmod>2015-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -64,14 +54,8 @@
     
         
     <url>
-     <loc>None/bkscr/sprite/</loc>
-     <lastmod>2015-12-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/bkscr/sound/</loc>
-     <lastmod>2015-12-14</lastmod>
+     <loc>http://bke.bakery.moe/new/quickstart/</loc>
+     <lastmod>2015-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -80,14 +64,30 @@
     
         
     <url>
-     <loc>None/parser/</loc>
-     <lastmod>2015-12-14</lastmod>
+     <loc>http://bke.bakery.moe/bkscr/sprite/</loc>
+     <lastmod>2015-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/parser/engine/</loc>
-     <lastmod>2015-12-14</lastmod>
+     <loc>http://bke.bakery.moe/bkscr/sound/</loc>
+     <lastmod>2015-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://bke.bakery.moe/parser/</loc>
+     <lastmod>2015-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://bke.bakery.moe/parser/engine/</loc>
+     <lastmod>2015-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

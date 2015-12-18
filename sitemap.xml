@@ -4,7 +4,7 @@
     
     <url>
      <loc>http://docs.bakery.moe/</loc>
-     <lastmod>2015-12-17</lastmod>
+     <lastmod>2015-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>http://docs.bakery.moe/faq/</loc>
-     <lastmod>2015-12-17</lastmod>
+     <lastmod>2015-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -21,31 +21,31 @@
         
     <url>
      <loc>http://docs.bakery.moe/old/quickstart/</loc>
-     <lastmod>2015-12-17</lastmod>
+     <lastmod>2015-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.bakery.moe/old/image/</loc>
-     <lastmod>2015-12-17</lastmod>
+     <lastmod>2015-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.bakery.moe/old/sound/</loc>
-     <lastmod>2015-12-17</lastmod>
+     <lastmod>2015-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.bakery.moe/old/grammar/</loc>
-     <lastmod>2015-12-17</lastmod>
+     <lastmod>2015-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.bakery.moe/old/animation/</loc>
-     <lastmod>2015-12-17</lastmod>
+     <lastmod>2015-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -55,7 +55,7 @@
         
     <url>
      <loc>http://docs.bakery.moe/new/quickstart/</loc>
-     <lastmod>2015-12-17</lastmod>
+     <lastmod>2015-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -65,13 +65,13 @@
         
     <url>
      <loc>http://docs.bakery.moe/bkscr/sprite/</loc>
-     <lastmod>2015-12-17</lastmod>
+     <lastmod>2015-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://docs.bakery.moe/bkscr/sound/</loc>
-     <lastmod>2015-12-17</lastmod>
+     <lastmod>2015-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -81,13 +81,19 @@
         
     <url>
      <loc>http://docs.bakery.moe/parser/</loc>
-     <lastmod>2015-12-17</lastmod>
+     <lastmod>2015-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://docs.bakery.moe/parser/engine/</loc>
-     <lastmod>2015-12-17</lastmod>
+     <loc>http://docs.bakery.moe/parser/engine/functions/</loc>
+     <lastmod>2015-12-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.bakery.moe</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         

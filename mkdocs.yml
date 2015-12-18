@@ -1,7 +1,9 @@
 site_name: BKEngine Documentary
+theme_dir: 'theme'
 theme: readthedocs
-site_description: BKEngine 文档中心，游戏引擎文档，Galgamme/AVG制作教程
+site_description: "BKEngine - 专业的AVG/Galgame游戏引擎 - 官方教程及文档中心~"
 site_author: 面包工坊
+site_url: "http://docs.bakery.moe"
 copyright: <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />本文档采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
 extra_css: [themefix.css]
 markdown_extensions:
@@ -28,4 +30,8 @@ pages:
         - 音频类: bkscr/sound.md
     - Parser 系统: 
         - 基本语法: parser/index.md
-        - 特有函数: parser/engine.md
+        - 全局函数: parser/engine/functions.md
+        - 全局类: 
+            - 按钮类: parser/engine/class/button.md
+            - CSV文档类: parser/engine/class/csvparser.md
+            

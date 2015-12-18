@@ -12,3 +12,33 @@
 code{
   font-size: inherit !important;
 }
+.wy-nav-content{
+	height: auto;
+}
+.wy-menu-vertical li ul.subnav ul.subnav {
+	padding-left: 0.6em;
+}
+ 
+div.follow_btn_line:before{
+	float: left;
+	line-height: 22px;
+	vertical-align: middle;
+	content: "关注我们： "
+}
+
+li.weiboShareNav{
+	float: right;
+	line-height: 31px;
+	vertical-align: middle;
+	height: 31px;
+}
+
+div.weiboShareFooter{
+	line-height: 40px;
+	height: 40px;
+	display: block;
+	text-align: center;
+	padding: 8px;
+	background-color: #efefef;
+	margin: 10px 0;
+}

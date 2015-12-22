@@ -12,15 +12,15 @@
   <meta name="author" content="面包工坊" />
   <meta property="wb:webmaster" content="2cd5f93eb4f66230" />
   <meta property="og:type" content="webpage" />
-  <meta property="og:url" content="http://docs.bakery.moe/bkscr/sound/" />
-  <meta property="og:title" content="音频 - BKEngine 文档中心" />
-  <meta property="og:description" content="BKEngine游戏引擎文档：音频" />
+  <meta property="og:url" content="http://docs.bakery.moe/bkscr/animate/" />
+  <meta property="og:title" content="帧动画 - BKEngine 文档中心" />
+  <meta property="og:description" content="BKEngine游戏引擎文档：帧动画" />
   <meta property="og:image" content="http://docs.bakery.moe/logo/1.png" />
   <meta property="og:image" content="http://docs.bakery.moe/logo/2.png" />
   <!--<meta name="weibo:webpage:create_at" content="网页的创建时间" />-->
-  <meta name="weibo:webpage:update_at" content="2015-12-22 12:05:14.957000" />
+  <meta name="weibo:webpage:update_at" content="2015-12-22 12:05:14.908000" />
   
-  <title>音频 - BKEngine 文档中心</title>
+  <title>帧动画 - BKEngine 文档中心</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -36,7 +36,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "音频";
+    var mkdocs_page_name = "帧动画";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -152,43 +152,37 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../animate/">帧动画</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">帧动画</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#horizontal">horizontal</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#vertical">vertical</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#multifiles">multifiles</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#start">start</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#cell">cell</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#start_1">start</a></li>
+                
+            
+            </ul>
         
     </li>
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">音频</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#se">se</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#bgm">bgm</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#voice">voice</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#stop">stop</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#volume">volume</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#pause">pause</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#resume">resume</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#fade">fade</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../sound/">音频</a>
         
     </li>
 
@@ -273,7 +267,7 @@
         
       
     
-    <li>音频</li>
+    <li>帧动画</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -288,18 +282,18 @@
               
                 <div class="toc">
 <ul>
-<li><a href="#se">se</a></li>
-<li><a href="#bgm">bgm</a></li>
-<li><a href="#voice">voice</a></li>
-<li><a href="#stop">stop</a></li>
-<li><a href="#volume">volume</a></li>
-<li><a href="#pause">pause</a></li>
-<li><a href="#resume">resume</a></li>
-<li><a href="#fade">fade</a></li>
+<li><a href="#horizontal">horizontal</a></li>
+<li><a href="#vertical">vertical</a></li>
+<li><a href="#multifiles">multifiles</a></li>
+<li><a href="#start">start</a></li>
+<li><a href="#cell">cell</a></li>
+<li><a href="#start_1">start</a></li>
 </ul>
 </div>
-<h2 id="se">se<a class="headerlink" href="#se" title="Permanent link">&para;</a></h2>
-<p>播放音效。   </p>
+<p>BKEngine提供了丰富帧动画模式，同时提供简单的控制选项，他们都归属于<code>animate</code>指令。<br />
+帧动画是一种特殊的精灵。</p>
+<h2 id="horizontal">horizontal<a class="headerlink" href="#horizontal" title="Permanent link">&para;</a></h2>
+<p>通过精灵表单(spritesheet)横向读取片段并创建帧动画精灵。   </p>
 <table>
 <thead>
 <tr>
@@ -311,48 +305,56 @@
 </thead>
 <tbody>
 <tr>
+<td>index</td>
+<td>✓</td>
+<td>Number</td>
+<td>要创建的精灵编号</td>
+</tr>
+<tr>
 <td>file</td>
 <td>✓</td>
 <td>String</td>
-<td>音频文件名</td>
+<td>精灵表单文件名</td>
 </tr>
 <tr>
-<td>channel</td>
+<td>frame</td>
+<td>✓</td>
+<td>Number</td>
+<td>每行的帧数</td>
+</tr>
+<tr>
+<td>row</td>
 <td></td>
 <td>Number</td>
-<td>通道号，默认为0</td>
+<td>行数，默认为1</td>
+</tr>
+<tr>
+<td>interval</td>
+<td></td>
+<td>Number</td>
+<td>每帧的播放时间(ms)，默认为33</td>
 </tr>
 <tr>
 <td>loop</td>
 <td></td>
-<td>Boolean</td>
-<td>是否循环，默认为true</td>
-</tr>
-<tr>
-<td>vol</td>
-<td></td>
-<td>Number</td>
-<td>音量，取值范围0-100，默认为100（最大）</td>
-</tr>
-<tr>
-<td>fadein</td>
-<td></td>
-<td>Number</td>
-<td>淡入时间(ms)，默认为0</td>
+<td>String</td>
+<td>动画循环模式，默认为“forward”，说明见下</td>
 </tr>
 </tbody>
 </table>
-<pre><code class="javascript">[se file=&quot;se/hit.wav&quot;]
-[se file=&quot;se/run.wav&quot; fadein=300 loop=true]
-</code></pre>
-
 <div class="admonition important">
 <p class="admonition-title">说明</p>
-<p>bgm命令使用通道号-1，voice命令使用通道号-2，这两个命令的详细用法见下。</p>
+<p>循环模式可选的值有：<br />
+1. <code>none</code> 不循环<br />
+2. <code>forward</code> 单项循环（正向播放完最后一帧后跳回第一帧继续正向播放）<br />
+3. <code>bouncing</code> 弹性循环（正向播放完最后一帧后反向播放回第一帧）  </p>
 </div>
+<pre><code class="javascript">[animate &quot;horizental&quot; index=10 file=&quot;animate/sheet.png&quot; frame=10 row=2 loop=&quot;bouncing&quot;]
+</code></pre>
+
 <hr />
-<h2 id="bgm">bgm<a class="headerlink" href="#bgm" title="Permanent link">&para;</a></h2>
-<p>播放背景音乐。   </p>
+<h2 id="vertical">vertical<a class="headerlink" href="#vertical" title="Permanent link">&para;</a></h2>
+<p>通过精灵表单(spritesheet)纵向读取片段并创建帧动画精灵。   </p>
 <table>
 <thead>
 <tr>
@@ -364,44 +366,97 @@
 </thead>
 <tbody>
 <tr>
+<td>index</td>
+<td>✓</td>
+<td>Number</td>
+<td>要创建的精灵编号</td>
+</tr>
+<tr>
 <td>file</td>
 <td>✓</td>
 <td>String</td>
-<td>音频文件名</td>
+<td>精灵表单文件名</td>
+</tr>
+<tr>
+<td>frame</td>
+<td>✓</td>
+<td>Number</td>
+<td>每列的帧数</td>
+</tr>
+<tr>
+<td>column</td>
+<td></td>
+<td>Number</td>
+<td>列数，默认为1</td>
+</tr>
+<tr>
+<td>interval</td>
+<td></td>
+<td>Number</td>
+<td>每帧的播放时间(ms)，默认为33</td>
+</tr>
+<tr>
+<td>loop</td>
+<td></td>
+<td>String</td>
+<td>动画循环模式，同horizental</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="javascript">[animate &quot;vertical&quot; index=10 file=&quot;animate/sheet.png&quot; frame=10 column=2 loop=&quot;bouncing&quot;]
+</code></pre>
+
+<hr />
+<h2 id="multifiles">multifiles<a class="headerlink" href="#multifiles" title="Permanent link">&para;</a></h2>
+<p>通过多个单帧文件创建帧动画精灵。   </p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>✓</td>
+<td>Number</td>
+<td>要创建的精灵编号</td>
+</tr>
+<tr>
+<td>file</td>
+<td>✓</td>
+<td>[String]</td>
+<td>文件名数组</td>
+</tr>
+<tr>
+<td>interval</td>
+<td></td>
+<td>Number</td>
+<td>每帧的播放时间(ms)，默认为33</td>
 </tr>
 <tr>
 <td>loop</td>
 <td></td>
 <td>Boolean</td>
-<td>是否循环，默认为true</td>
+<td>动画是否循环，默认为true</td>
 </tr>
 <tr>
-<td>vol</td>
+<td>delay</td>
 <td></td>
 <td>Number</td>
-<td>音量，取值范围0-100，默认为100（最大）</td>
-</tr>
-<tr>
-<td>fadein</td>
-<td></td>
-<td>Number</td>
-<td>淡入时间(ms)，默认为0</td>
-</tr>
-<tr>
-<td>loopto</td>
-<td></td>
-<td>Number</td>
-<td>循环起始位置(ms)</td>
+<td>每次循环之间的间隔，默认为0</td>
 </tr>
 </tbody>
 </table>
-<pre><code class="javascript">[bgm file=&quot;bgm/001.ogg&quot;]
-[bgm file=&quot;bgm/002.ogg&quot; fadein=1000 loopto=60000]
+<pre><code class="javascript">[animate &quot;multifiles&quot; index=10 file=[&quot;animate/frame1.png&quot;,&quot;animate/frame2.png&quot;,&quot;animate/frame3.png&quot;] loop=true]
 </code></pre>
 
 <hr />
-<h2 id="voice">voice<a class="headerlink" href="#voice" title="Permanent link">&para;</a></h2>
-<p>播放语音。   </p>
+<h2 id="start">start<a class="headerlink" href="#start" title="Permanent link">&para;</a></h2>
+<p>开始播放。</p>
 <table>
 <thead>
 <tr>
@@ -413,26 +468,19 @@
 </thead>
 <tbody>
 <tr>
-<td>file</td>
+<td>index</td>
 <td>✓</td>
-<td>String</td>
-<td>音频文件名</td>
-</tr>
-<tr>
-<td>vol</td>
-<td></td>
 <td>Number</td>
-<td>音量，取值范围0-100，默认为100（最大）</td>
+<td>精灵编号</td>
 </tr>
 </tbody>
 </table>
-<pre><code class="javascript">[voice file=&quot;voice/A_00001.ogg&quot;]
-[voice file=&quot;voice/B_00001.ogg&quot; vol=80]
+<pre><code class="javascript">[animate &quot;start&quot; index=10]
 </code></pre>
 
 <hr />
-<h2 id="stop">stop<a class="headerlink" href="#stop" title="Permanent link">&para;</a></h2>
-<p>停止特定通道的播放。   </p>
+<h2 id="cell">cell<a class="headerlink" href="#cell" title="Permanent link">&para;</a></h2>
+<p>修改动画精灵当前帧。</p>
 <table>
 <thead>
 <tr>
@@ -444,27 +492,25 @@
 </thead>
 <tbody>
 <tr>
-<td>channel</td>
-<td></td>
+<td>index</td>
+<td>✓</td>
 <td>Number</td>
-<td>通道号，默认为全部通道</td>
+<td>精灵编号</td>
 </tr>
 <tr>
-<td>fadeout</td>
-<td></td>
+<td>frame</td>
+<td>✓</td>
 <td>Number</td>
-<td>淡入时间(ms)，默认为0</td>
+<td>与修改到的帧号</td>
 </tr>
 </tbody>
 </table>
-<pre><code class="javascript">[stop]
-[stop channel=bgm]  //停止背景音乐播放
-[stop channel=voice]    //停止语音播放
+<pre><code class="javascript">[animate &quot;cell&quot; index=10 frame=2]
 </code></pre>
 
 <hr />
-<h2 id="volume">volume<a class="headerlink" href="#volume" title="Permanent link">&para;</a></h2>
-<p>读取或改变某个通道的音量。</p>
+<h2 id="start_1">start<a class="headerlink" href="#start_1" title="Permanent link">&para;</a></h2>
+<p>停止播放。</p>
 <table>
 <thead>
 <tr>
@@ -476,120 +522,14 @@
 </thead>
 <tbody>
 <tr>
-<td>channel</td>
+<td>index</td>
 <td>✓</td>
 <td>Number</td>
-<td>要读取或改变音量的通道号</td>
-</tr>
-<tr>
-<td>get</td>
-<td>○</td>
-<td>Variable</td>
-<td>信息保存到的变量，不能与set同时存在</td>
-</tr>
-<tr>
-<td>set</td>
-<td>○</td>
-<td>Number</td>
-<td>新的音量值，不能与get同时存在</td>
+<td>精灵编号</td>
 </tr>
 </tbody>
 </table>
-<pre><code class="javascript">[volume channel=bgm set=80] //修改背景音乐音量为80
-[volume channel=0 get=ch0Vol]
-</code></pre>
-
-<hr />
-<h2 id="pause">pause<a class="headerlink" href="#pause" title="Permanent link">&para;</a></h2>
-<p>暂停某个通道的播放。</p>
-<table>
-<thead>
-<tr>
-<th>参数名</th>
-<th>必须</th>
-<th>类型</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>channel</td>
-<td>✓</td>
-<td>Number</td>
-<td>通道号</td>
-</tr>
-</tbody>
-</table>
-<pre><code class="javascript">[pause channel=bgm]
-[pause channel=0]
-</code></pre>
-
-<hr />
-<h2 id="resume">resume<a class="headerlink" href="#resume" title="Permanent link">&para;</a></h2>
-<p>恢复某个通道的播放。</p>
-<table>
-<thead>
-<tr>
-<th>参数名</th>
-<th>必须</th>
-<th>类型</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>channel</td>
-<td>✓</td>
-<td>Number</td>
-<td>通道号</td>
-</tr>
-</tbody>
-</table>
-<pre><code class="javascript">[resume channel=bgm]
-[resume channel=0]
-</code></pre>
-
-<hr />
-<h2 id="fade">fade<a class="headerlink" href="#fade" title="Permanent link">&para;</a></h2>
-<p>将某个通道的音量渐变至另一个值。</p>
-<table>
-<thead>
-<tr>
-<th>参数名</th>
-<th>必须</th>
-<th>类型</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>channel</td>
-<td>✓</td>
-<td>Number</td>
-<td>通道号</td>
-</tr>
-<tr>
-<td>time</td>
-<td>✓</td>
-<td>Number</td>
-<td>渐变时间(ms)</td>
-</tr>
-<tr>
-<td>to</td>
-<td>✓</td>
-<td>Number</td>
-<td>将要变化到的音量</td>
-</tr>
-<tr>
-<td>stop</td>
-<td></td>
-<td>Boolean</td>
-<td>渐变完成后是否停止播放，默认为false</td>
-</tr>
-</tbody>
-</table>
-<pre><code class="javascript">[fade channel=bgm time=1000 to=80]
-[fade channel=0 time=500 to=0 stop=true]
+<pre><code class="javascript">[animate &quot;stop&quot; index=10]
 </code></pre>
               
             </div>
@@ -601,10 +541,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../text/" class="btn btn-neutral float-right" title="文字"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../sound/" class="btn btn-neutral float-right" title="音频"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../animate/" class="btn btn-neutral" title="帧动画"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sprite/" class="btn btn-neutral" title="精灵"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -632,10 +572,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../animate/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../sprite/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../text/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../sound/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

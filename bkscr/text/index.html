@@ -1,0 +1,1018 @@
+<!DOCTYPE html xmlns:wb="http://open.weibo.com/wb">
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" xmlns:wb="http://open.weibo.com/wb"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" xmlns:wb="http://open.weibo.com/wb"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="renderer" content="webkit">
+  <meta name="keywords" content="BKEngine 游戏引擎 教程 文档 AVG Galgame 吉里吉里 文字游戏 文字冒险游戏 文字游戏制作 独立游戏 Galgame游戏引擎 AVG游戏引擎 Galgame制作 AVG游戏制作" />
+  <meta name="description" content="None" />
+  <meta name="author" content="面包工坊" />
+  <meta property="wb:webmaster" content="2cd5f93eb4f66230" />
+  <meta property="og:type" content="webpage" />
+  <meta property="og:url" content="http://docs.bakery.moe/bkscr/text/" />
+  <meta property="og:title" content="文字 - BKEngine 文档中心" />
+  <meta property="og:description" content="BKEngine游戏引擎文档：文字" />
+  <meta property="og:image" content="http://docs.bakery.moe/logo/1.png" />
+  <meta property="og:image" content="http://docs.bakery.moe/logo/2.png" />
+  <!--<meta name="weibo:webpage:create_at" content="网页的创建时间" />-->
+  <meta name="weibo:webpage:update_at" content="2015-12-22 12:05:15.039000" />
+  
+  <title>文字 - BKEngine 文档中心</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <!--<link href='https://fonts.useso.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>-->
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../themefix.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "文字";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script>
+  <script async src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BKEngine 文档中心</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+        <wb:follow-button uid="5186767799" type="red_2" height="24" style="margin-top:0.809em;;display:inline-block"></wb:follow-button>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">首页</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../faq/">常见问题（必看！）</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>旧教程</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../old/quickstart/">快速入门</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../old/image/">图像</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../old/sound/">声音</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../old/grammar/">语法进阶</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../old/animation/">动画</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>新教程（施工中）</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../new/quickstart/">快速入门</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>脚本命令手册</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sprite/">精灵</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../animate/">帧动画</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../sound/">音频</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">文字</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#text">text</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#textwindow">textwindow</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#textcursor">textcursor</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#textoff">textoff</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#texton">texton</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#textspeed">textspeed</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#textstyle">textstyle</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#texttag">texttag</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#textsprite">textsprite</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#locate">locate</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_1">文字风格快捷开关</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_2">换行、清屏、等待点击、等待换页</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#ruby">ruby</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#storefont">storefont</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#restorefont">restorefont</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#messagelayer">messagelayer</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Parser 系统</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../parser/">基本语法</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../parser/engine/functions/">全局函数</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>全局类</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../parser/engine/class/button/">按钮类</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../parser/engine/class/csvparser/">CSV文档类</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BKEngine 文档中心</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>脚本命令手册 &raquo;</li>
+        
+      
+    
+    <li>文字</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+    <li class='weiboShareNav'>
+      <wb:share-button appkey="1698918097" addition="simple" type="button" ralateUid="5186767799" id="weiboShare"></wb:share-button>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <div class="toc">
+<ul>
+<li><a href="#text">text</a></li>
+<li><a href="#textwindow">textwindow</a></li>
+<li><a href="#textcursor">textcursor</a></li>
+<li><a href="#textoff">textoff</a></li>
+<li><a href="#texton">texton</a></li>
+<li><a href="#textspeed">textspeed</a></li>
+<li><a href="#textstyle">textstyle</a></li>
+<li><a href="#texttag">texttag</a></li>
+<li><a href="#textsprite">textsprite</a></li>
+<li><a href="#locate">locate</a></li>
+<li><a href="#_1">文字风格快捷开关</a></li>
+<li><a href="#_2">换行、清屏、等待点击、等待换页</a></li>
+<li><a href="#ruby">ruby</a></li>
+<li><a href="#storefont">storefont</a></li>
+<li><a href="#restorefont">restorefont</a></li>
+<li><a href="#messagelayer">messagelayer</a></li>
+</ul>
+</div>
+<h2 id="text">text<a class="headerlink" href="#text" title="Permanent link">&para;</a></h2>
+<p>在文字框中显示文字，相当于直接在脚本中写文本。  </p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td>✓</td>
+<td>String</td>
+<td>文字内容</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="javascript">//以下两行等同
+[text text=&quot;这是一行文字&quot;]
+这是一行文字
+</code></pre>
+
+<hr />
+<h2 id="textwindow">textwindow<a class="headerlink" href="#textwindow" title="Permanent link">&para;</a></h2>
+<p>设置文字框。</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td></td>
+<td>String</td>
+<td>文字框背景图片，与color不能同时指定</td>
+</tr>
+<tr>
+<td>color</td>
+<td></td>
+<td>Color</td>
+<td>文字框底色，与file不能同时指定</td>
+</tr>
+<tr>
+<td>opacity</td>
+<td></td>
+<td>Number</td>
+<td>文字框透明度</td>
+</tr>
+<tr>
+<td>pos</td>
+<td></td>
+<td>Point</td>
+<td>文字框相对于游戏画面的坐标</td>
+</tr>
+<tr>
+<td>rect</td>
+<td></td>
+<td>Rectangle</td>
+<td>文字内容区的大小，相对于文字框</td>
+</tr>
+<tr>
+<td>xinterval</td>
+<td></td>
+<td>Number</td>
+<td>字间距(px)</td>
+</tr>
+<tr>
+<td>yinterval</td>
+<td></td>
+<td>Number</td>
+<td>行间距(px)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="javascript">[textwindow file=&quot;ui/textwindow.png&quot; opacity=255 pos=[0,420] rect=[5,5,600,200]]
+[textwindow color=0xff6600 xinterval=3 yinterval=10]
+</code></pre>
+
+<div class="admonition important">
+<p class="admonition-title">说明</p>
+<p>非必须的参数若不写则为保持原有设置，这点与其他指令不同。</p>
+</div>
+<hr />
+<h2 id="textcursor">textcursor<a class="headerlink" href="#textcursor" title="Permanent link">&para;</a></h2>
+<p>文字光标，可使用普通精灵或动画精灵。</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>✓</td>
+<td>Number</td>
+<td>光标精灵的编号</td>
+</tr>
+<tr>
+<td>follow</td>
+<td>✓</td>
+<td>Boolean</td>
+<td>是否跟随在文字末尾出现</td>
+</tr>
+<tr>
+<td>pos</td>
+<td></td>
+<td>Point</td>
+<td>若follow为false，需指定光标的固定位置（坐标相对于文字框）</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="javascript">[textcursor index=10 follow=true]
+[textwindow index=10 follow=false pos=[5,160]]
+</code></pre>
+
+<hr />
+<h2 id="textoff">textoff<a class="headerlink" href="#textoff" title="Permanent link">&para;</a></h2>
+<p>隐藏文字框。</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>time</td>
+<td></td>
+<td>Number</td>
+<td>淡出时间，默认为0</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="javascript">[textoff]
+[textoff time=300]
+</code></pre>
+
+<hr />
+<h2 id="texton">texton<a class="headerlink" href="#texton" title="Permanent link">&para;</a></h2>
+<p>显示文字框。</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>time</td>
+<td></td>
+<td>Number</td>
+<td>淡入时间，默认为0</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="javascript">[texton]
+[texton time=300]
+</code></pre>
+
+<hr />
+<h2 id="textspeed">textspeed<a class="headerlink" href="#textspeed" title="Permanent link">&para;</a></h2>
+<p>调节文字显示速度。</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>interval</td>
+<td>✓</td>
+<td>Number</td>
+<td>文字显示的速度，范围0-100，100为立即显示</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="javascript">[textspeed interval=50]
+</code></pre>
+
+<hr />
+<h2 id="textstyle">textstyle<a class="headerlink" href="#textstyle" title="Permanent link">&para;</a></h2>
+<p>修改文字样式。</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td></td>
+<td>String</td>
+<td>字体文件名</td>
+</tr>
+<tr>
+<td>size</td>
+<td></td>
+<td>Number</td>
+<td>字号</td>
+</tr>
+<tr>
+<td>color</td>
+<td></td>
+<td>Color</td>
+<td>颜色</td>
+</tr>
+<tr>
+<td>bold</td>
+<td></td>
+<td>Boolean</td>
+<td>是否为粗体</td>
+</tr>
+<tr>
+<td>italic</td>
+<td></td>
+<td>Boolean</td>
+<td>是否为斜体</td>
+</tr>
+<tr>
+<td>strike</td>
+<td></td>
+<td>Boolean</td>
+<td>是否加删除线</td>
+</tr>
+<tr>
+<td>under</td>
+<td></td>
+<td>Boolean</td>
+<td>是否加下划线</td>
+</tr>
+<tr>
+<td>shadow</td>
+<td></td>
+<td>Boolean</td>
+<td>开启阴影</td>
+</tr>
+<tr>
+<td>shadowcolor</td>
+<td></td>
+<td>Color</td>
+<td>阴影颜色</td>
+</tr>
+<tr>
+<td>stroke</td>
+<td></td>
+<td>Boolean</td>
+<td>开启描边</td>
+</tr>
+<tr>
+<td>strokecolor</td>
+<td></td>
+<td>Color</td>
+<td>描边颜色</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="javascript">[textstyle name=&quot;font/SourceHans.otf&quot; size=22]
+[textstyle shadow=true shadowcolor=0x333333]
+</code></pre>
+
+<div class="admonition important">
+<p class="admonition-title">说明</p>
+<p>非必须的参数若不写则为保持原有设置，这点与其他指令不同。</p>
+</div>
+<hr />
+<h2 id="texttag">texttag<a class="headerlink" href="#texttag" title="Permanent link">&para;</a></h2>
+<p>定义文本tag处理。<br />
+默认tag标记为<code>【】</code>，括号内的内容将作为参数传入处理标签中。</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>label</td>
+<td>✓</td>
+<td>String</td>
+<td>处理用的标签</td>
+</tr>
+<tr>
+<td>file</td>
+<td></td>
+<td>String</td>
+<td>标签所在文件，默认为当前文件</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="javascript">*main
+[texttag label=&quot;*tagHandler&quot;]
+【小明|xm_voice_1.ogg】我们是共产主义接班人！
+...
+...
+*otherlabels
+
+*texttag
+##
+var tags = tag.split(&quot;|&quot;,true);
+var name = tags[0]; //&quot;小明&quot;
+var voice = tags[1];    //&quot;xm_voice_1.ogg&quot;
+##
+@return
+
+</code></pre>
+
+<hr />
+<h2 id="textsprite">textsprite<a class="headerlink" href="#textsprite" title="Permanent link">&para;</a></h2>
+<p>创建一个文字精灵，文字精灵是一种特殊的精灵。</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>✓</td>
+<td>Number</td>
+<td>要创建的精灵编号</td>
+</tr>
+<tr>
+<td>text</td>
+<td>✓</td>
+<td>String</td>
+<td>文字内容</td>
+</tr>
+<tr>
+<td>font</td>
+<td></td>
+<td>String</td>
+<td>字体文件名</td>
+</tr>
+<tr>
+<td>size</td>
+<td></td>
+<td>Number</td>
+<td>字号</td>
+</tr>
+<tr>
+<td>color</td>
+<td></td>
+<td>Color</td>
+<td>颜色</td>
+</tr>
+<tr>
+<td>width</td>
+<td></td>
+<td>Number</td>
+<td>最大宽度(px)，默认为-1（不限制）</td>
+</tr>
+<tr>
+<td>height</td>
+<td></td>
+<td>Number</td>
+<td>最大高度(px)，默认为-1（不限制）</td>
+</tr>
+<tr>
+<td>xinterval</td>
+<td></td>
+<td>Number</td>
+<td>字间距(px)</td>
+</tr>
+<tr>
+<td>yinterval</td>
+<td></td>
+<td>Number</td>
+<td>行间距(px)</td>
+</tr>
+<tr>
+<td>extrachar</td>
+<td></td>
+<td>String</td>
+<td>超过高宽时显示省略字符，默认为&rdquo;&hellip;&rdquo;</td>
+</tr>
+<tr>
+<td>bold</td>
+<td></td>
+<td>Boolean</td>
+<td>是否为粗体</td>
+</tr>
+<tr>
+<td>italic</td>
+<td></td>
+<td>Boolean</td>
+<td>是否为斜体</td>
+</tr>
+<tr>
+<td>strike</td>
+<td></td>
+<td>Boolean</td>
+<td>是否加删除线</td>
+</tr>
+<tr>
+<td>under</td>
+<td></td>
+<td>Boolean</td>
+<td>是否加下划线</td>
+</tr>
+<tr>
+<td>shadow</td>
+<td></td>
+<td>Boolean</td>
+<td>开启阴影</td>
+</tr>
+<tr>
+<td>shadowcolor</td>
+<td></td>
+<td>Color</td>
+<td>阴影颜色</td>
+</tr>
+<tr>
+<td>stroke</td>
+<td></td>
+<td>Boolean</td>
+<td>开启描边</td>
+</tr>
+<tr>
+<td>strokecolor</td>
+<td></td>
+<td>Color</td>
+<td>描边颜色</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="javascript">[textsprite index=10 text=&quot;示例文字&quot; size=20 color=0xff6600]
+[textsprite index=20 text='第一行\n第二行' width=100 extrachar=&quot;……&quot;]
+</code></pre>
+
+<div class="admonition important">
+<p class="admonition-title">说明</p>
+<p>非必须的参数若不写则为保持原有设置，这点与其他指令不同。<br />
+若需要创建多行文本的文字精灵，请使用<code>\n</code>换行，并使用单引号表示字符串（如上例二）。双引号中的<code>\n</code>不会被识别为换行符。  </p>
+</div>
+<hr />
+<h2 id="locate">locate<a class="headerlink" href="#locate" title="Permanent link">&para;</a></h2>
+<p>改变下一次文字绘制位置。</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td></td>
+<td>Number</td>
+<td>x坐标，默认为当前坐标</td>
+</tr>
+<tr>
+<td>y</td>
+<td></td>
+<td>Number</td>
+<td>y坐标，默认为当前坐标</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="javascript">[locate x=100 y=50]
+</code></pre>
+
+<hr />
+<h2 id="_1">文字风格快捷开关<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>一共有4种开关，分别为：  </p>
+<ul>
+<li>开关斜体  <code>[i]</code></li>
+<li>开关粗体    <code>[b]</code></li>
+<li>开关删除线 <code>[s]</code></li>
+<li>开关下划线 <code>[u]</code></li>
+</ul>
+<p>示例：</p>
+<pre><code class="javascript">这是一行普通的文本，可以同时混合[i]斜体[i]、[b]粗体[b]、[s]删除线[s]、[u]下划线[u]使用；
+也可以多个同时使用，如加了[b][u]下划线的粗体[b][u]等。
+</code></pre>
+
+<p>实际效果：</p>
+<blockquote>
+<p>这是一行普通的文本，可以同时混合<i>斜体</i>、<b>粗体</b>、<s>删除线</s>、<u>下划线</u>使用；<br />
+也可以多个同时使用，如加了<b><u>下划线的粗体</b></u>等。</p>
+</blockquote>
+<hr />
+<h2 id="_2">换行、清屏、等待点击、等待换页<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>换行    <code>[r]</code></li>
+<li>清屏    <code>[er]</code></li>
+<li>等待点击  <code>[l]</code></li>
+<li>等待换页    <code>[p]</code></li>
+</ul>
+<p>这4个指令是游戏中最常用的指令。</p>
+<p>示例：</p>
+<pre><code class="javascript">这是一行文本[r]这是第二行[l]点击后才能看到这些文字[p]
+前面的文字都没有了，再点击这一行也会消失。[l][er]
+</code></pre>
+
+<hr />
+<h2 id="ruby">ruby<a class="headerlink" href="#ruby" title="Permanent link">&para;</a></h2>
+<p>显示小字注释（常用于日文中汉字上标记假名等）。</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td>✓</td>
+<td>String</td>
+<td>注释内容</td>
+</tr>
+<tr>
+<td>size</td>
+<td></td>
+<td>Number</td>
+<td>注释字号，默认为6</td>
+</tr>
+<tr>
+<td>char</td>
+<td></td>
+<td>Number</td>
+<td>被注释的字符数，默认为1</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="javascript">日语中，汉字写作和读作[ruby text=&quot;かん&quot;]漢[ruby text=&quot;じ&quot;]字
+</code></pre>
+
+<p>效果：  </p>
+<blockquote>
+<p>日语中，汉字写作和读作<ruby>漢<rt>かん</rt>字<rt>じ</rt></ruby></p>
+</blockquote>
+<hr />
+<h2 id="storefont">storefont<a class="headerlink" href="#storefont" title="Permanent link">&para;</a></h2>
+<p>暂存当前字体信息。</p>
+<h2 id="restorefont">restorefont<a class="headerlink" href="#restorefont" title="Permanent link">&para;</a></h2>
+<p>恢复先前存储的字体信息。</p>
+<pre><code class="javascript">...
+[storefont]
+...(修改字体信息)
+[restorefont]
+...
+</code></pre>
+
+<hr />
+<h1 id="messagelayer">messagelayer<a class="headerlink" href="#messagelayer" title="Permanent link">&para;</a></h1>
+<p>额外初始化一个消息层或切换到某个已经存在的消息层，不同的消息层之前文字风格（textstyle）和绘制位置不同。<br />
+适合以下场景：  </p>
+<ul>
+<li>同时在两个不同的地方输出文字</li>
+<li>交替进行的对话等文字风格或位置相差较大，频繁使用<code>textstyle``locate</code>等命令不利于后续修改</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必须</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>✓</td>
+<td>Number</td>
+<td>要创建的消息层编号</td>
+</tr>
+<tr>
+<td>active</td>
+<td></td>
+<td>Boolean</td>
+<td>是否激活，默认为false</td>
+</tr>
+<tr>
+<td>char</td>
+<td></td>
+<td>Number</td>
+<td>被注释的字符数，默认为1</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="javascript">//若编号对应的消息层不存在
+[messagelayer index=1 active=true]  //创建消息层，编号为1，并切换到此层。
+[messagelayer index=1 active=false]  //创建消息层，编号为1，但不切换到此层。
+
+//若编号对应的消息层已存在
+[messagelayer index=1]  //切换到此层
+[messagelayer index=message_layer]  //切换到默认消息层
+[messagelayer index=1 active=false]  //没有任何效果
+</code></pre>
+
+<div class="admonition important">
+<p class="admonition-title">说明</p>
+<p>消息层与精灵共用一套编号系统，注意冲突问题。<br />
+默认的消息层编号为-2，对应的内置变量为<code>message_layer</code>。</p>
+</div>
+              
+            </div>
+          </div>
+          <div class='weiboShareFooter'>
+            <wb:share-button appkey="1698918097" addition="simple" type="button" ralateUid="5186767799" id="weiboShare"></wb:share-button>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../parser/" class="btn btn-neutral float-right" title="基本语法"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../sound/" class="btn btn-neutral" title="音频"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />本文档采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../sound/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../parser/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

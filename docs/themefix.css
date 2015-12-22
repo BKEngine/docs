@@ -42,3 +42,7 @@ div.weiboShareFooter{
 	background-color: #efefef;
 	margin: 10px 0;
 }
+
+code, .rst-content tt {
+    background: rgba(100,100,100,0.1);
+}

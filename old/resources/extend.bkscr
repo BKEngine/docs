@@ -1,22 +1,62 @@
 ﻿*register
 @macro name="basic_dialogbox"
-@macro name="select" file text label se
+@macro name="select1" file text label se
+@macro name="enable_dialogbox"
+@macro name="disable_dialogbox"
+@return
+
+//用来禁用对话框事件的宏
+*disable_dialogbox
+@for var=i range=range(1,5)//生成for循环。其中range(1,7)=[1,2,3,4,5,6]
+	@remove index=9000+i
+@next
+@spriteopt index=2323 disable=true
+@spriteopt index=message_layer disable=true 
+@remove index=2323
+@event name="mousewheelup" enable=false
+@event name="mousewheeldown" enable=false
+
+@return
+
+//用来启用对话框事件的宏
+*enable_dialogbox
+#var button_pos=[ [700,140],[704,120],[716,100],[726,80]];
+#var onclicks=[ ["*save",'save','call',,,%[condition: "!tf.isRecall", ignore:true]] , ["*load",'load','call',,,%[condition: "!tf.isRecall", ignore:true]] ,[ , ,"callback","System.skipMode=true"],["*option","system_setting","callback",,,%[ignore:true]],]
+@for var=i range=range(1,5)
+	@button index=9000+i idle='menu/messagebox/button/m_button_0'+i click='menu/messagebox/button/m_button_on_0'+i hover='menu/messagebox/button/m_button_on_0'+i threshold=0 onclick=onclicks[i-1]
+	@addto target=message_layer index=9000+i pos=button_pos[i-1] zorder=0
+@next
+[addto index=2323 target=message_layer zorder=-50 pos=[0,0] opacity=180]
+@spriteopt index=2323 disable=false
+@spriteopt index=message_layer disable=false 
+@event name="mousewheelup" enable=true file="system_history" label="*enter" type="call" ignore=true condition="System.stable"
+@event name="mousewheeldown" enable=true file="extend" label="*mouse" type="call" ignore=true
 @return
 
 *basic_dialogbox
-#update_x=(System.resolutionSize[0]/2)-400;
-#update_y=System.resolutionSize[1]-600;
-[textwindow pos=[15+update_x,444+update_y] rect=[10,5,760,116] xinterval=1 yinterval=1 opacity=190]
+[textwindow pos=[270,410] rect=[48,35,600,140] xinterval=1 yinterval=1 opacity=190]
 [textstyle size=21 bold=false]
+[sprite index=2323 file="picture/menu/messagebox/messagebox"] 
+[addto index=2323 target=message_layer zorder=-50 pos=[0,0] opacity=180]
+//创建按钮
+//储存，读取，回顾，自动，快进，系统
 
-[sprite index=500 file="image/menu/textwindow/main_flat_set"]
-[addto index=500 target=message_layer zorder=-13 pos=[-30,-10] opacity=180]
-[sprite index=501 file="image/menu/textwindow/main_flat_set2"]
-[addto index=501 target=message_layer zorder=-12 pos=[0,0] opacity=180]
+//按钮坐标数组
+#var button_pos=[ [700,140],[704,120],[716,100],[726,80],[1023,680],[1099,680] ];
+
+//按钮单击事件
+#var onclicks=[ ["*save",'save','call',,,%[condition: "!tf.isRecall", ignore:true]] , ["*load",'load','call',,,%[condition: "!tf.isRecall", ignore:true]] ,[ , ,"callback","System.skipMode=true"],["*option","system_setting","call",,,%[ignore:true]],]
+
+@for var=i range=range(1,7)//生成for循环。其中range(1,7)=[1,2,3,4,5,6]
+	//在这个循环中会依次的将01到06号按钮生成并添加到底层上
+	@button index=9000+i idle='menu/messagebox/button/m_button_0'+i click='menu/messagebox/button/m_button_on_0'+i hover='menu/messagebox/button/m_button_on_0'+i threshold=0 onclick=onclicks[i-1]//创建按钮精灵
+	//将按钮精灵添加到底层上
+	@addto target=message_layer index=9000+i pos=button_pos[i-1] zorder=0
+@next
+//在这里建立鼠标滚轮事件，向上滚进入历史界面
+@enable_dialogbox
 [return]
-
-
-*select
+*select1
 @savepoint
 @if "typeof(text)!='array'"
 	#log("select：text参数需要一个数组");

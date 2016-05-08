@@ -26,10 +26,11 @@ pages:
     - 新教程（施工中）:
         - 快速入门: new/quickstart.md
     - 脚本命令手册:
-        - 精灵类: bkscr/sprite.md
+        - 精灵: bkscr/sprite.md
         - 帧动画: bkscr/animate.md
-        - 音频类: bkscr/sound.md
-        - 文字类: bkscr/text.md
+        - 音频: bkscr/sound.md
+        - 文字: bkscr/text.md
+        - 动作: bkscr/action.md
     - Parser 系统: 
         - 基本语法: parser/index.md
         - 全局函数: parser/engine/functions.md
